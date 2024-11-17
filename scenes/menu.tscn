@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://pl4xi0xo7a3j"]
 
-[ext_resource type="Script" path="res://scenes/menu.gd" id="1_15log"]
-[ext_resource type="Texture2D" uid="uid://bn2vnrflwcel0" path="res://assets/menu/DALL·E 2024-11-16 18.35.48 - Una imagen que sirve como fondo para un menú de un juego de misterios matemáticos ambientado en los años 30. La escena muestra una oficina privada con.webp" id="2_b0jae"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_15log"]
+[ext_resource type="Texture2D" uid="uid://ctu6r0go5xr35" path="res://assets/menu/DALL·E 2024-11-16 18.35.48 - Una imagen que sirve como fondo para un menú de un juego de misterios matemáticos ambientado en los años 30. La escena muestra una oficina privada con.webp" id="2_b0jae"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1acri"]
 font_size = 100
@@ -44,6 +44,11 @@ offset_top = 728.0
 offset_right = 1103.0
 offset_bottom = 842.0
 text = "SALIR"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
