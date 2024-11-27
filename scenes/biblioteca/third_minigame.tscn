@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://civ2bjsmkbodb"]
+
+[ext_resource type="Texture2D" uid="uid://wftsw3tnymej" path="res://assets/biblioteca/matchbook/fondo.jpeg" id="1_ppylg"]
+[ext_resource type="PackedScene" uid="uid://biaop614vseby" path="res://scenes/biblioteca/dragndrop.tscn" id="2_gf4ak"]
+[ext_resource type="Texture2D" uid="uid://c6d3ai0luxlsv" path="res://assets/biblioteca/matchbook/book_tileset.jpeg" id="3_wx8hq"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(591, 554)
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(-16, -17)
+texture = ExtResource("1_ppylg")
+
+[node name="TextureRect" parent="." instance=ExtResource("2_gf4ak")]
+offset_left = -407.0
+offset_top = -382.0
+offset_right = -367.0
+offset_bottom = -342.0
+scale = Vector2(5.68602, -1.50281)
+texture = ExtResource("3_wx8hq")
+
+[node name="TextureRect2" parent="." instance=ExtResource("2_gf4ak")]
+offset_left = -139.0
+offset_top = -386.0
+offset_right = -99.0
+offset_bottom = -346.0
+scale = Vector2(5.68602, -1.50281)
