@@ -7,4 +7,22 @@
 script = ExtResource("1_e1pak")
 
 [node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(-0.000244141, -9.15527e-05)
+scale = Vector2(1.87109, 1.04785)
 texture = ExtResource("1_ppylg")
+
+[node name="BooksGrid" type="GridContainer" parent="."]
+offset_left = -736.0
+offset_top = -475.0
+offset_right = 839.0
+offset_bottom = -175.0
+columns = 4
+
+[node name="DropGrid" type="GridContainer" parent="."]
+offset_left = -209.0
+offset_top = 157.0
+offset_right = 202.0
+offset_bottom = 482.0
+columns = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
