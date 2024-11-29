@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://civ2bjsmkbodb"]
+
+[ext_resource type="Script" path="res://scripts/library/library.gd" id="1_e1pak"]
+[ext_resource type="Texture2D" uid="uid://wftsw3tnymej" path="res://assets/biblioteca/matchbook/fondo.jpeg" id="1_ppylg"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_e1pak")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+texture = ExtResource("1_ppylg")
