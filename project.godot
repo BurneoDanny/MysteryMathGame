@@ -14,6 +14,9 @@ config/name="MysteryMathGame"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+"<<<<<<<HEAD[layer_names]2d_physics/layer_1"="player"
+2d_physics/layer_2="npc"
+2d_physics/layer_4="triggers"
 
 [layer_names]
 

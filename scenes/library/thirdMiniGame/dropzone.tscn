@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2njlrdlcuycn"]
+
+[ext_resource type="Script" path="res://scripts/library/dropzone.gd" id="1_8vxxj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qa154"]
+size = Vector2(88, 88)
+
+[node name="StaticBody2D" type="StaticBody2D" groups=["dropzone"]]
+script = ExtResource("1_8vxxj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -45.0
+offset_top = -47.0
+offset_right = 43.0
+offset_bottom = 41.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -3)
+shape = SubResource("RectangleShape2D_qa154")
+debug_color = Color(0.891248, 0.198822, 0.63841, 0.42)

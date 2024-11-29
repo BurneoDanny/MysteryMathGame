@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmac4lfkilyyr"]
+[gd_scene load_steps=4 format=3 uid="uid://cmac4lfkilyyr"]
 
+[ext_resource type="Script" path="res://scripts/library/dragObject.gd" id="1_ftrv1"]
 [ext_resource type="Texture2D" uid="uid://c6d3ai0luxlsv" path="res://assets/biblioteca/matchbook/book_tileset.jpeg" id="1_mb8yn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rc3ly"]
 size = Vector2(89, 88.5)
 
 [node name="draggableObject" type="Node2D"]
+script = ExtResource("1_ftrv1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_mb8yn")
@@ -17,3 +19,8 @@ region_rect = Rect2(712, 640, 88, 88)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -0.25)
 shape = SubResource("RectangleShape2D_rc3ly")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

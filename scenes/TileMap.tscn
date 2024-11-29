@@ -33059,7 +33059,8 @@ collision_layer = 9
 script = ExtResource("2_1rn67")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-scale = Vector2(1.48509, 1.40226)
+position = Vector2(0, 5.77542)
+scale = Vector2(1.48509, 1.14557)
 sprite_frames = SubResource("SpriteFrames_w2u6u")
 animation = &"side_walk"
 frame = 2

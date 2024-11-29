@@ -5,47 +5,44 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_1acri"]
 font_size = 100
-font_color = Color(0, 0, 0, 1)
+font_color = Color(0.402571, 0.335596, 0.871681, 1)
+outline_size = 10
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 script = ExtResource("1_15log")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1792.0
-offset_bottom = 1024.0
+offset_right = 1919.0
+offset_bottom = 1081.0
 texture = ExtResource("2_b0jae")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 187.0
-offset_right = 1773.0
-offset_bottom = 324.0
+offset_left = 88.0
+offset_top = 112.0
+offset_right = 1834.0
+offset_bottom = 249.0
 text = "MYSTERY MATH GAME VERSION 0.01"
 label_settings = SubResource("LabelSettings_1acri")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 701.0
-offset_top = 467.0
-offset_right = 1098.0
-offset_bottom = 581.0
+offset_left = 772.0
+offset_top = 538.0
+offset_right = 1169.0
+offset_bottom = 652.0
 text = "JUGAR"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 706.0
-offset_top = 728.0
-offset_right = 1103.0
-offset_bottom = 842.0
+offset_left = 772.0
+offset_top = 736.0
+offset_right = 1169.0
+offset_bottom = 850.0
 text = "SALIR"
-
-[node name="Node2D" type="Node2D" parent="."]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
