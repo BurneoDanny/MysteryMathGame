@@ -33013,7 +33013,7 @@ size = Vector2(22, 52)
 texture = ExtResource("7_jgm18")
 4:6/size_in_atlas = Vector2i(4, 8)
 4:6/0 = 0
-4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.54074, 25.2791, 8.30851, 24.7487, 8.83884, 39.4212, -8.48528, 39.2444, -6.89429, 31.4663)
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.54074, 25.2791, 8.22012, 25.3675, 8.83884, 39.4212, -8.48528, 39.2444, -6.89429, 31.4663)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5pwr6"]
 texture = ExtResource("6_hfflo")
@@ -33038,7 +33038,6 @@ size = Vector2(32, 5.5)
 position = Vector2(818, 3091)
 
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
 position = Vector2(302, -2558)
 tile_set = SubResource("TileSet_m6xf5")
 format = 2
@@ -33059,8 +33058,8 @@ collision_layer = 9
 script = ExtResource("2_1rn67")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(0, 5.77542)
-scale = Vector2(1.48509, 1.14557)
+position = Vector2(0, 1.27541)
+scale = Vector2(1.48509, 1.34558)
 sprite_frames = SubResource("SpriteFrames_w2u6u")
 animation = &"side_walk"
 frame = 2
@@ -33078,15 +33077,17 @@ limit_bottom = 2600
 position_smoothing_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = 1
+z_as_relative = false
 tile_map_data = PackedByteArray("AAAWAFP/AQABAAEAAAD6/1L/AAAEAAYAAAAwAFH/AAAEAAYAAAAnAGD/AAAEAAYAAAAEAGD/AAAEAAYAAAA=")
 tile_set = SubResource("TileSet_dbrbh")
-collision_visibility_mode = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer"]
 position = Vector2(491, -2659)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TileMapLayer/StaticBody2D"]
-polygon = PackedVector2Array(-362, 82, -363, -271, -352, -285, 84, -283, 84, 82, -77, 82, -77, 114, -121, 114, -121, 66, -156, 66, -158, 114, -202, 114, -202, 82)
+position = Vector2(-1, -1)
+polygon = PackedVector2Array(-362, 82, -363, -271, -352, -285, 84, -283, 84, 82, -77, 82, -77, 114, -121, 114, -122, 67, -156, 66, -158, 114, -202, 114, -202, 82)
 
 [node name="SceneTrigger" parent="." instance=ExtResource("16_0w0i6")]
 position = Vector2(352, -2568)
