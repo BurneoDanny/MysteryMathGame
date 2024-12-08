@@ -33038,6 +33038,7 @@ size = Vector2(32, 5.5)
 position = Vector2(818, 3091)
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 position = Vector2(302, -2558)
 tile_set = SubResource("TileSet_m6xf5")
 format = 2

@@ -82,6 +82,8 @@ height = 87.1795
 light_mask = 2
 visibility_layer = 3
 scale = Vector2(0.39, 0.39)
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_ac6bq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
