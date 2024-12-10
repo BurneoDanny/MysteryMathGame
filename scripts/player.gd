@@ -2,12 +2,23 @@ extends CharacterBody2D
 
 const speed = 100
 var current_dir = "none"
+@onready var effects = $Effects
+@export var knockbackPower: int = 500
+@onready var hurtTimer = $hurtTimer
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
+	effects.play("RESET")
+	
+func handle_collision():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		print_debug(collider.name)
 
 func _physics_process(delta):
 	player_movement(delta)
+	handle_collision()
 
 func player_movement(delta):
 	if Input.is_action_pressed("ui_right"):
@@ -68,3 +79,22 @@ func play_anim(movement):
 			anim.play("back_walk")
 		elif movement == 0:
 			anim.play("back_idle")
+
+
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	if area.name == "hitbox":
+		print_debug(area.get_parent().name) # Replace with function body.
+		knockback(area.get_parent().velocity)
+		effects.play("hurtBlink")
+		hurtTimer.start()
+		await hurtTimer.timeout
+		effects.play("RESET")
+	
+func knockback(enemyVelocity: Vector2):
+	var knockbackDirection = (enemyVelocity - velocity).normalized() * knockbackPower
+	velocity = knockbackDirection
+	print_debug(velocity)
+	print_debug(position)
+	move_and_slide()
+	print_debug(position)
+	print_debug(" ")

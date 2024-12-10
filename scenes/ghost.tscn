@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://h0j716wq7nbi"]
+[gd_scene load_steps=15 format=3 uid="uid://h0j716wq7nbi"]
 
 [ext_resource type="Texture2D" uid="uid://bhaf1na1uqpsm" path="res://assets/Animations/ghost.png" id="1_5qewg"]
 [ext_resource type="Script" path="res://scripts/ghost.gd" id="1_ac6bq"]
@@ -75,8 +75,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o3bbx"]
-radius = 28.2051
-height = 87.1795
+radius = 33.3333
+height = 112.82
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pera5"]
+radius = 30.7692
+height = 112.821
 
 [node name="Ghost" type="CharacterBody2D"]
 light_mask = 2
@@ -100,5 +104,11 @@ debug_enabled = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 autostart = true
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(7.69231, -10.2564)
+shape = SubResource("CapsuleShape2D_pera5")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -97,6 +97,7 @@ polygon = PackedVector2Array(-3, -7.11807, 1612, -1.3302, 1613, 976.82, 813, 977
 [node name="player" parent="." instance=ExtResource("4_x2xq0")]
 light_mask = 9
 position = Vector2(754, 780)
+knockbackPower = 2000
 
 [node name="followcam" type="Camera2D" parent="player"]
 position = Vector2(-4, 4)
@@ -106,6 +107,7 @@ limit_top = 0
 limit_right = 3400
 limit_bottom = 2600
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="player"]
 position = Vector2(-4, 6)
