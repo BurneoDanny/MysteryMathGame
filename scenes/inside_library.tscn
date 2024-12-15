@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://c26u8sbqjbcsp"]
+[gd_scene load_steps=14 format=4 uid="uid://c26u8sbqjbcsp"]
 
+[ext_resource type="Script" path="res://scenes/inside_library.gd" id="1_tm1nk"]
 [ext_resource type="Texture2D" uid="uid://cb11e6b485jck" path="res://assets/lpc-victorian-preview/bricks.png" id="3_dyf12"]
 [ext_resource type="Texture2D" uid="uid://du22dtntputxj" path="res://assets/lpc-victorian-preview/maze walls.png" id="4_d6qtp"]
 [ext_resource type="PackedScene" uid="uid://bvdwa2wtv60ul" path="res://scenes/player.tscn" id="4_x2xq0"]
+[ext_resource type="PackedScene" uid="uid://bmjhnbc88nvim" path="res://gui/heartsContainer.tscn" id="5_yvu0q"]
 [ext_resource type="PackedScene" uid="uid://h0j716wq7nbi" path="res://scenes/ghost.tscn" id="6_7lw2c"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3jkdh"]
@@ -73,6 +75,7 @@ radius = 8.0
 height = 38.0
 
 [node name="inside_library" type="Node2D"]
+script = ExtResource("1_tm1nk")
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
@@ -117,3 +120,14 @@ shape = SubResource("CapsuleShape2D_6mugv")
 position = Vector2(754, 595)
 scale = Vector2(0.25, 0.25)
 player = NodePath("../player")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="heartsContainer" parent="CanvasLayer" instance=ExtResource("5_yvu0q")]
+anchors_preset = -1
+anchor_left = 0.155
+anchor_right = 0.155
+offset_left = -178.0
+offset_right = 0.0
+offset_bottom = 13.0
+grow_horizontal = 0

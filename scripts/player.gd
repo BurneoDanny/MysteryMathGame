@@ -3,8 +3,12 @@ extends CharacterBody2D
 const speed = 100
 var current_dir = "none"
 @onready var effects = $Effects
-@export var knockbackPower: int = 500
 @onready var hurtTimer = $hurtTimer
+@export var knockbackPower: int = 500
+
+@export var maxHealth = 3
+@onready var currentHealth: int = maxHealth
+signal healthChanged
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
@@ -84,6 +88,11 @@ func play_anim(movement):
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	if area.name == "hitbox":
 		print_debug(area.get_parent().name) # Replace with function body.
+		currentHealth -= 1
+		if currentHealth < 0:
+			currentHealth = maxHealth
+		
+		healthChanged.emit(currentHealth)
 		knockback(area.get_parent().velocity)
 		effects.play("hurtBlink")
 		hurtTimer.start()
