@@ -456,6 +456,7 @@ libraries = {
 }
 
 [node name="hurtTimer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]

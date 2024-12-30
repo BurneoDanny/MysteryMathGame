@@ -6,6 +6,7 @@ const speed = 40
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
 func _ready() -> void:
+	$AnimatedSprite2D.play("Ghost")
 	makepath()
 
 func _physics_process(_delta: float) -> void:
