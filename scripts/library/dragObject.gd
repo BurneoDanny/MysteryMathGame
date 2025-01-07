@@ -22,13 +22,13 @@ func _process(delta: float) -> void:
 			else:
 				tween.tween_property(self, 'global_position', position, 0.2).set_ease(Tween.EASE_OUT)
 
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('dropzone'):
 		body.modulate = Color(Color.BLACK,1)
 		is_inside_dropzone = true
 		body_ref = body
 	 
-
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group('dropzone'):

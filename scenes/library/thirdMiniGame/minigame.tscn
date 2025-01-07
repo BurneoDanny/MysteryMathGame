@@ -11,18 +11,35 @@ position = Vector2(-0.000244141, -9.15527e-05)
 scale = Vector2(1.87109, 1.04785)
 texture = ExtResource("1_ppylg")
 
-[node name="BooksGrid" type="GridContainer" parent="."]
-offset_left = -736.0
-offset_top = -475.0
-offset_right = 839.0
-offset_bottom = -175.0
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -958.0
+offset_top = -536.0
+offset_right = 958.0
+offset_bottom = 536.0
+
+[node name="BooksGrid" type="GridContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 148.0
+offset_bottom = 148.0
+grow_horizontal = 2
+theme_override_constants/h_separation = 100
 columns = 4
 
-[node name="DropGrid" type="GridContainer" parent="."]
-offset_left = -209.0
-offset_top = 157.0
-offset_right = 202.0
-offset_bottom = 482.0
+[node name="DropGrid" type="GridContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 500
 columns = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
