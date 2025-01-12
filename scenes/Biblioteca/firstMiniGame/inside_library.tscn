@@ -1,13 +1,13 @@
 [gd_scene load_steps=18 format=4 uid="uid://c26u8sbqjbcsp"]
 
-[ext_resource type="Script" path="res://scenes/inside_library.gd" id="1_tm1nk"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/inside_library.gd" id="1_tm1nk"]
 [ext_resource type="Texture2D" uid="uid://cb11e6b485jck" path="res://assets/lpc-victorian-preview/bricks.png" id="3_dyf12"]
 [ext_resource type="Texture2D" uid="uid://du22dtntputxj" path="res://assets/lpc-victorian-preview/maze walls.png" id="4_d6qtp"]
-[ext_resource type="PackedScene" uid="uid://bvdwa2wtv60ul" path="res://scenes/player.tscn" id="4_x2xq0"]
+[ext_resource type="PackedScene" uid="uid://bvdwa2wtv60ul" path="res://scenes/Common/player.tscn" id="4_x2xq0"]
 [ext_resource type="PackedScene" uid="uid://bmjhnbc88nvim" path="res://gui/heartsContainer.tscn" id="5_yvu0q"]
-[ext_resource type="PackedScene" uid="uid://h0j716wq7nbi" path="res://scenes/ghost.tscn" id="6_7lw2c"]
-[ext_resource type="PackedScene" uid="uid://ddw3x8qffe33e" path="res://scenes/collectable_book_1.tscn" id="7_6jx0o"]
-[ext_resource type="PackedScene" uid="uid://cnj2hcdvklajg" path="res://scenes/health_timer.tscn" id="7_hgx0p"]
+[ext_resource type="PackedScene" uid="uid://h0j716wq7nbi" path="res://scenes/Biblioteca/firstMiniGame/ghost.tscn" id="6_7lw2c"]
+[ext_resource type="PackedScene" uid="uid://ddw3x8qffe33e" path="res://scenes/Biblioteca/firstMiniGame/collectable_book_1.tscn" id="7_6jx0o"]
+[ext_resource type="PackedScene" uid="uid://cnj2hcdvklajg" path="res://scenes/Biblioteca/firstMiniGame/health_timer.tscn" id="7_hgx0p"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3jkdh"]
 

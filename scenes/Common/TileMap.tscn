@@ -1,6 +1,6 @@
 [gd_scene load_steps=75 format=4 uid="uid://cuy8qbswd8op0"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="2_1rn67"]
+[ext_resource type="Script" path="res://scripts/Common/player.gd" id="2_1rn67"]
 [ext_resource type="Texture2D" uid="uid://ieeobc84qbu4" path="res://assets/Animations/Aldruir pose N.png" id="3_5ck4a"]
 [ext_resource type="Texture2D" uid="uid://cia10cp045o3f" path="res://assets/Animations/Aldruir Walk N 2.png" id="4_dc42h"]
 [ext_resource type="Texture2D" uid="uid://bt6qpc6n5h7r" path="res://assets/Animations/Aldruir Pose S.png" id="5_f3d0r"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://crch8koc3q70i" path="res://assets/Animations/aldruir walk.png" id="8_6076w"]
 [ext_resource type="Texture2D" uid="uid://cb11e6b485jck" path="res://assets/lpc-victorian-preview/bricks.png" id="8_ov8p1"]
 [ext_resource type="Texture2D" uid="uid://c1yowb2isabr8" path="res://assets/lpc-victorian-preview/sprite floor.png" id="15_rqd4f"]
-[ext_resource type="PackedScene" uid="uid://4b4pjoy5dh6y" path="res://scenes/scene_trigger.tscn" id="16_0w0i6"]
+[ext_resource type="PackedScene" uid="uid://4b4pjoy5dh6y" path="res://scenes/Biblioteca/firstMiniGame/scene_trigger.tscn" id="16_0w0i6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0edvk"]
 texture = ExtResource("15_rqd4f")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmac4lfkilyyr"]
 
-[ext_resource type="Script" path="res://scripts/library/dragObject.gd" id="1_ftrv1"]
-[ext_resource type="Texture2D" uid="uid://c6d3ai0luxlsv" path="res://assets/biblioteca/matchbook/book_tileset.jpeg" id="1_mb8yn"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/dragObject.gd" id="1_ka2fh"]
+[ext_resource type="Texture2D" uid="uid://c6d3ai0luxlsv" path="res://assets/biblioteca/matchbook/book_tileset.jpeg" id="2_h654p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rc3ly"]
 size = Vector2(89, 88.5)
@@ -13,10 +13,10 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="draggableObject" type="Node2D"]
 z_index = 1
-script = ExtResource("1_ftrv1")
+script = ExtResource("1_ka2fh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_mb8yn")
+texture = ExtResource("2_h654p")
 region_enabled = true
 region_rect = Rect2(712, 640, 88, 88)
 

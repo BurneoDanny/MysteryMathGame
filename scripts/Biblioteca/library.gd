@@ -1,7 +1,7 @@
 extends Node2D
 
-var book = preload('res://scenes/library/thirdMiniGame/draggableObject.tscn')
-var dropzone = preload('res://scenes/library/thirdMiniGame/dropzone.tscn')
+var book = preload('res://scenes/Biblioteca/thirdMiniGame/draggableObject.tscn')
+var dropzone = preload('res://scenes/Biblioteca/thirdMiniGame/dropzone.tscn')
 
 @onready var books_grid = $Control/BooksGrid
 @onready var drop_grid = $Control/DropGrid

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2njlrdlcuycn"]
 
-[ext_resource type="Script" path="res://scripts/library/dropzone.gd" id="1_8vxxj"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/dropzone.gd" id="1_ejbs5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qa154"]
 size = Vector2(88, 88)
@@ -11,7 +11,7 @@ outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" groups=["dropzone"]]
-script = ExtResource("1_8vxxj")
+script = ExtResource("1_ejbs5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -45.0

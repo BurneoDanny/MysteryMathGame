@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="MysteryMathGame"
-run/main_scene="res://scenes/menu.tscn"
+run/main_scene="res://scenes/Common/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-global="*res://scripts/global.gd"
-Test="*res://scenes/music/test.tscn"
+global="*res://scripts/Biblioteca/global.gd"
+Test="*res://sounds/music/test.tscn"
 
 [display]
 
