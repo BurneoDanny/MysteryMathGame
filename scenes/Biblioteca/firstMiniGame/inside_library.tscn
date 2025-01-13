@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=4 uid="uid://c26u8sbqjbcsp"]
 
-[ext_resource type="Script" path="res://scripts/Biblioteca/inside_library.gd" id="1_tm1nk"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/firstMiniGame/inside_library.gd" id="1_tm1nk"]
 [ext_resource type="Texture2D" uid="uid://cb11e6b485jck" path="res://assets/lpc-victorian-preview/bricks.png" id="3_dyf12"]
 [ext_resource type="Texture2D" uid="uid://du22dtntputxj" path="res://assets/lpc-victorian-preview/maze walls.png" id="4_d6qtp"]
 [ext_resource type="PackedScene" uid="uid://bvdwa2wtv60ul" path="res://scenes/Common/player.tscn" id="4_x2xq0"]

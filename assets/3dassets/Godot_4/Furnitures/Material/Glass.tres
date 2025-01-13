@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+
+[ext_resource type="Shader" path="res://assets/Furnitures/Material/Glass.gdshader" id="1_t6tc7"]
+[ext_resource type="Texture2D" uid="uid://0c3j3jttrp0c" path="res://assets/Furnitures/textures/TiledWood_Roughness.png" id="2_s04kh"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_t6tc7")
+shader_parameter/distortion_size = null
+shader_parameter/glass = ExtResource("2_s04kh")

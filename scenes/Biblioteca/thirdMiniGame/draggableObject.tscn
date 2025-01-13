@@ -1,29 +1,32 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmac4lfkilyyr"]
 
-[ext_resource type="Script" path="res://scripts/Biblioteca/dragObject.gd" id="1_ka2fh"]
-[ext_resource type="Texture2D" uid="uid://c6d3ai0luxlsv" path="res://assets/biblioteca/matchbook/book_tileset.jpeg" id="2_h654p"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/draggableObject.gd" id="1_o2hni"]
+[ext_resource type="Texture2D" uid="uid://bujasvaudi5ge" path="res://assets/3dassets/Old-Books/IMPORT/texture/books-01-jack-assets-albedo.bmp" id="2_mf8ai"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rc3ly"]
-size = Vector2(89, 88.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7p7h"]
+size = Vector2(25.4405, 39.8678)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dodp8"]
 font_size = 32
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
-[node name="draggableObject" type="Node2D"]
+[node name="draggableObject" type="Node2D" groups=["draggable_object"]]
 z_index = 1
-script = ExtResource("1_ka2fh")
+script = ExtResource("1_o2hni")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_h654p")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mf8ai")
 region_enabled = true
-region_rect = Rect2(712, 640, 88, 88)
+region_rect = Rect2(256, 384, 256, 382)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_rc3ly")
+position = Vector2(4.76837e-07, 0)
+scale = Vector2(4.54, 4.54)
+shape = SubResource("RectangleShape2D_k7p7h")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -36.0

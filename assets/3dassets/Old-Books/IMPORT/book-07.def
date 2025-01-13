@@ -1,0 +1,26 @@
+mtl main-books-01-jack-assets
+shader a_n_rm 542d323fb6604f468eb8fd99b29502d8
+emissiveBlink false
+emissiveBlinkSpeed 0.000000
+emissiveLinkBuildingLight false
+uscrollanim false
+vscrollanim false
+scrollanimspeed 0.000000 0.000000
+uvstepanim false
+uvstepanimparam 1 1 0 1.000000
+sortindex 0
+castshadow true
+cull back
+uvofs 0.000000 0.000000
+uvscl 1.000000 1.000000
+AMap books-01-jack-assets-albedo.bmp
+NMap books-01-jack-assets-normal.bmp
+RMMap books-01-jack-assets-mask.bmp
+color 1.000000 1.000000 1.000000
+normalscl 0.700000
+roughness 1.000000
+metallic 1.000000
+specular 1.000000
+emissive_color 1.000000 1.000000 1.000000
+emissive_strength 0.000000
+

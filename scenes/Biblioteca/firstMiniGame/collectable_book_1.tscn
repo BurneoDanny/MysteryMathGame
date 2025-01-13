@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dkhljlhycwvgy" path="res://scenes/Biblioteca/firstMiniGame/collectable.tscn" id="1_xysl3"]
 [ext_resource type="Texture2D" uid="uid://bfhxxifs0icj5" path="res://assets/art/book1.png" id="2_4r1lc"]
-[ext_resource type="Script" path="res://scripts/Biblioteca/collectable_book_1.gd" id="2_kk7r8"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/firstMiniGame/collectable_book_1.gd" id="2_kk7r8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6p06"]
 resource_local_to_scene = true
