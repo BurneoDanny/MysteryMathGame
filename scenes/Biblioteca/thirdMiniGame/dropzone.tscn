@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2njlrdlcuycn"]
+
+[ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/dropzone.gd" id="1_ejbs5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qa154"]
+size = Vector2(256, 384)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s382g"]
+font_size = 50
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" groups=["dropzone"]]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_ejbs5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -192.0
+offset_right = 128.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.772549)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qa154")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 152.0
+offset_top = -70.0
+offset_right = 570.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_s382g")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

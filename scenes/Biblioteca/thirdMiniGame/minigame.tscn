@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://civ2bjsmkbodb"]
+
+[ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/minigame.gd" id="1_2eg5v"]
+[ext_resource type="PackedScene" uid="uid://cc2bw61y2wcj1" path="res://scenes/Biblioteca/thirdMiniGame/Biblioteca3D.tscn" id="3_ii417"]
+[ext_resource type="PackedScene" uid="uid://cmac4lfkilyyr" path="res://scenes/Biblioteca/thirdMiniGame/draggableObject.tscn" id="3_mdes8"]
+[ext_resource type="PackedScene" uid="uid://c2njlrdlcuycn" path="res://scenes/Biblioteca/thirdMiniGame/dropzone.tscn" id="4_0eb4a"]
+[ext_resource type="Texture2D" uid="uid://bovcvru510m55" path="res://assets/2dassets/UI_Pack_Free/UI_Pack_Free/PNG/Button_Right.png" id="5_gtats"]
+[ext_resource type="Script" path="res://scenes/Biblioteca/thirdMiniGame/next_level.gd" id="6_06xgy"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_gue44"]
+viewport_path = NodePath("Container/SubViewport")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h0jo2"]
+radius = 130.015
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2eg5v")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Fondo" type="Sprite2D" parent="."]
+modulate = Color(0.830335, 0.830335, 0.830335, 0.643137)
+position = Vector2(-2.91038e-11, -7.27596e-12)
+texture = SubResource("ViewportTexture_gue44")
+
+[node name="Container" type="Container" parent="."]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="SubViewport" type="SubViewport" parent="Container"]
+size = Vector2i(1920, 1080)
+
+[node name="Biblioteca3d" parent="Container/SubViewport" instance=ExtResource("3_ii417")]
+
+[node name="DropZones" type="Node" parent="."]
+
+[node name="StaticBody2D" parent="DropZones" instance=ExtResource("4_0eb4a")]
+position = Vector2(-560, 98)
+
+[node name="StaticBody2D2" parent="DropZones" instance=ExtResource("4_0eb4a")]
+position = Vector2(-98, 98)
+
+[node name="StaticBody2D3" parent="DropZones" instance=ExtResource("4_0eb4a")]
+position = Vector2(398, 98)
+
+[node name="StaticBody2D4" parent="DropZones" instance=ExtResource("4_0eb4a")]
+position = Vector2(-97, 420)
+
+[node name="StaticBody2D5" parent="DropZones" instance=ExtResource("4_0eb4a")]
+position = Vector2(398, 420)
+
+[node name="StaticBody2D6" parent="DropZones" instance=ExtResource("4_0eb4a")]
+position = Vector2(-560, 420)
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="draggableObject" parent="Objects" instance=ExtResource("3_mdes8")]
+position = Vector2(-282, -311)
+
+[node name="draggableObject2" parent="Objects" instance=ExtResource("3_mdes8")]
+position = Vector2(-96, -311)
+
+[node name="draggableObject3" parent="Objects" instance=ExtResource("3_mdes8")]
+position = Vector2(89, -311)
+
+[node name="draggableObject4" parent="Objects" instance=ExtResource("3_mdes8")]
+position = Vector2(278, -311)
+
+[node name="draggableObject5" parent="Objects" instance=ExtResource("3_mdes8")]
+position = Vector2(-473, -311)
+
+[node name="draggableObject6" parent="Objects" instance=ExtResource("3_mdes8")]
+position = Vector2(467, -311)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(820, -447)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_gtats")
+script = ExtResource("6_06xgy")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("CircleShape2D_h0jo2")

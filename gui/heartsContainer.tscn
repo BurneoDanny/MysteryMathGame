@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmjhnbc88nvim"]
 
-[ext_resource type="Script" path="res://scripts/heartsContainer.gd" id="1_mtixy"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/firstMiniGame/heartsContainer.gd" id="1_mtixy"]
 
 [node name="heartsContainer" type="HBoxContainer"]
 layout_direction = 3

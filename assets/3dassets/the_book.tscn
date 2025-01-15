@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgqt47yohhm1j"]
+
+[ext_resource type="PackedScene" uid="uid://b4oo3cox3hodj" path="res://assets/3dassets/Old-Books/IMPORT/book-01.fbx" id="1_2ukoj"]
+[ext_resource type="Texture2D" uid="uid://bujasvaudi5ge" path="res://assets/3dassets/Old-Books/IMPORT/texture/books-01-jack-assets-albedo.bmp" id="2_5f1j4"]
+[ext_resource type="Texture2D" uid="uid://b75liwes3p4v7" path="res://assets/3dassets/Old-Books/IMPORT/texture/books-01-jack-assets-normal.bmp" id="3_hqrkl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dwvx"]
+albedo_color = Color(0.289584, 0.140071, 0.0122576, 1)
+albedo_texture = ExtResource("2_5f1j4")
+normal_enabled = true
+normal_texture = ExtResource("3_hqrkl")
+
+[node name="book-01" instance=ExtResource("1_2ukoj")]
+
+[node name="Cube_001" parent="." index="0"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_7dwvx")
