@@ -32,8 +32,9 @@ func _physics_process(delta):
 			
 func hurtByEnemy(area):
 	currentHealth -= 1
-	if currentHealth < 0:
+	if currentHealth == 0:
 		currentHealth = maxHealth
+		_on_health_equal_zero()
 	healthChanged.emit(currentHealth)
 	isHurt = true
 	knockback(area.get_parent().velocity)
@@ -118,3 +119,8 @@ func knockback(enemyVelocity: Vector2):
 	move_and_slide()
 	print_debug(position)
 	print_debug(" ")
+	print_debug("current HEALTH = ",currentHealth)
+	
+	
+func _on_health_equal_zero():
+		get_tree().change_scene_to_file("res://scenes/gameover.tscn")

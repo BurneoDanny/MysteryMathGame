@@ -126,7 +126,8 @@ position = Vector2(-4, 6)
 shape = SubResource("CapsuleShape2D_6mugv")
 
 [node name="Ghost" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_7lw2c")]
-position = Vector2(754, 595)
+light_mask = 9
+position = Vector2(752, 594)
 scale = Vector2(0.25, 0.25)
 player = NodePath("../player")
 
