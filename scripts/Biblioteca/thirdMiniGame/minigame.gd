@@ -1,12 +1,15 @@
 extends Node2D
 
-var assigned_numbers = []
 
+var assigned_numbers = []
 
 func _ready() -> void:
 	assign_numbers()
 	generate_numbers()
-	
+
+#func _process(delta: float) -> void:
+	#check_all_objects_placed()	
+	#
 func assign_numbers() -> void:
 	assigned_numbers = []
 	while assigned_numbers.size() < 6:
@@ -42,8 +45,15 @@ func shuffle_nodes(nodes: Array) -> Array:
 		var temp = nodes[i]
 		nodes[i] = nodes[random_index]
 		nodes[random_index] = temp
-	return nodes
+	return nodes	
 
+#func check_all_objects_placed() -> void:
+	#var objects = get_tree().get_nodes_in_group("draggable_object")
+	#for obj in objects:
+		#if not obj.get("placed_in_dropzone"):
+			#return 
+	#arrow_sprite.modulate = Color(Color.WHITE)
+	
 # Función para convertir números a texto en español
 func convert_number_to_words(number: int) -> String:
 	var units = ["", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cmac4lfkilyyr" path="res://scenes/Biblioteca/thirdMiniGame/draggableObject.tscn" id="3_mdes8"]
 [ext_resource type="PackedScene" uid="uid://c2njlrdlcuycn" path="res://scenes/Biblioteca/thirdMiniGame/dropzone.tscn" id="4_0eb4a"]
 [ext_resource type="Texture2D" uid="uid://bovcvru510m55" path="res://assets/2dassets/UI_Pack_Free/UI_Pack_Free/PNG/Button_Right.png" id="5_gtats"]
-[ext_resource type="Script" path="res://scenes/Biblioteca/thirdMiniGame/next_level.gd" id="6_06xgy"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/next_level.gd" id="6_06xgy"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_gue44"]
 viewport_path = NodePath("Container/SubViewport")
@@ -84,3 +84,5 @@ script = ExtResource("6_06xgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
 shape = SubResource("CircleShape2D_h0jo2")
+
+[connection signal="input_event" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_input_event"]
