@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://civ2bjsmkbodb"]
+[gd_scene load_steps=11 format=3 uid="uid://civ2bjsmkbodb"]
 
 [ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/minigame.gd" id="1_2eg5v"]
 [ext_resource type="PackedScene" uid="uid://cc2bw61y2wcj1" path="res://scenes/Biblioteca/thirdMiniGame/Biblioteca3D.tscn" id="3_ii417"]
@@ -6,12 +6,19 @@
 [ext_resource type="PackedScene" uid="uid://c2njlrdlcuycn" path="res://scenes/Biblioteca/thirdMiniGame/dropzone.tscn" id="4_0eb4a"]
 [ext_resource type="Texture2D" uid="uid://bovcvru510m55" path="res://assets/2dassets/UI_Pack_Free/UI_Pack_Free/PNG/Button_Right.png" id="5_gtats"]
 [ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/next_level.gd" id="6_06xgy"]
+[ext_resource type="FontFile" uid="uid://dtaiklndn4dtq" path="res://assets/fonts/vhs-gothic.ttf" id="7_lki8b"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_gue44"]
 viewport_path = NodePath("Container/SubViewport")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h0jo2"]
 radius = 130.015
+
+[sub_resource type="LabelSettings" id="LabelSettings_2k3bm"]
+font = ExtResource("7_lki8b")
+font_size = 35
+outline_size = 14
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_2eg5v")
@@ -40,13 +47,13 @@ size = Vector2i(1920, 1080)
 position = Vector2(-560, 98)
 
 [node name="StaticBody2D2" parent="DropZones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-98, 98)
+position = Vector2(-59, 98)
 
 [node name="StaticBody2D3" parent="DropZones" instance=ExtResource("4_0eb4a")]
 position = Vector2(398, 98)
 
 [node name="StaticBody2D4" parent="DropZones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-97, 420)
+position = Vector2(-59, 420)
 
 [node name="StaticBody2D5" parent="DropZones" instance=ExtResource("4_0eb4a")]
 position = Vector2(398, 420)
@@ -85,4 +92,26 @@ script = ExtResource("6_06xgy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
 shape = SubResource("CircleShape2D_h0jo2")
 
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 180.0
+one_shot = true
+
+[node name="timerlabel" type="Label" parent="."]
+offset_left = 729.0
+offset_top = -366.0
+offset_right = 921.0
+offset_bottom = -311.0
+label_settings = SubResource("LabelSettings_2k3bm")
+horizontal_alignment = 1
+
+[node name="level" type="Label" parent="."]
+offset_left = 729.0
+offset_top = -311.0
+offset_right = 921.0
+offset_bottom = -256.0
+label_settings = SubResource("LabelSettings_2k3bm")
+horizontal_alignment = 1
+
 [connection signal="input_event" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

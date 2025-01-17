@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmac4lfkilyyr"]
+[gd_scene load_steps=6 format=3 uid="uid://cmac4lfkilyyr"]
 
 [ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/draggableObject.gd" id="1_o2hni"]
 [ext_resource type="Texture2D" uid="uid://bujasvaudi5ge" path="res://assets/3dassets/Old-Books/IMPORT/texture/books-01-jack-assets-albedo.bmp" id="2_mf8ai"]
+[ext_resource type="FontFile" uid="uid://dtaiklndn4dtq" path="res://assets/fonts/vhs-gothic.ttf" id="3_ee3gu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7p7h"]
 size = Vector2(25.4405, 39.8678)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dodp8"]
+font = ExtResource("3_ee3gu")
 font_size = 32
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
