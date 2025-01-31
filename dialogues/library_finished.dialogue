@@ -1,0 +1,26 @@
+~ start
+Alcalde: [center][b][color=yellow]📖 ¡El Misterio de la Biblioteca Ha Sido Resuelto! 📖[/color][/b][/center]
+Alcalde: [wave]¡Hombre Misterio, lo lograste![/wave][wait=0.5]
+Alcalde: Has superado los [b]tres acertijos[/b] y, sobre todo, resolviste el último desafío...[wait=0.5]
+Alcalde: Gracias a ti, finalmente empezamos a entender lo que está ocurriendo en Math City.[wait=1]
+
+Alcalde: [b][color=red]¡Y su próximo objetivo está claro![/color][/b] [shake]Son astutos, después de todo...[/shake][wait=1]
+Alcalde: Todo el caos en la biblioteca, las portadas borradas, los libros falsos, los estantes desordenados… ¡todo fue una distracción![wait=1]
+Alcalde: Nos han querido desorientar cubriéndolo todo con falsificaciones, mandando a los [b]pobres fantasmas[/b] a vagar sin descanso… [wave]pero ya sabemos la verdad.[/wave][wait=1]
+
+Alcalde: Porque al final… [b][color=orange]solo robaron un único libro.[/color][/b][wait=1]
+Alcalde: Y aquí viene lo más extraño… [shake]no era el más valioso.[/shake][wait=0.5]
+Alcalde: Si hubieran querido lo más importante, se habrían llevado el legendario [b]"Ultra Codificado R de Universos".[/b][wait=1]
+Alcalde: Pero en cambio… [wave]¡se llevaron una receta de cocina![/wave] [wait=1]
+
+Alcalde: [b][color=blue]¿Una receta de cocina?[/color][/b] ¡No tiene sentido! [shake]¿Para qué querrían algo así?[/shake][wait=1]
+Alcalde: …Oh… espera un momento. [wait=0.5]
+Alcalde: [b][color=red]No puede ser…[/color][/b] [shake]¡Ese libro pertenece al gerente del banco![/shake][wait=1]
+Alcalde: [b]¡Su pasatiempo es cocinar![/b] Esto solo puede significar una cosa…[wait=1]
+Alcalde: [wave]¡Se dirigen al banco![/wave] [wait=0.5]
+
+Alcalde: [b][color=yellow]¡Vamos rápido, no hay tiempo que perder![/color][/b] [shake]Si llegamos tarde, podrían estar en medio del golpe.[/shake][wait=1]
+Alcalde: [b]Pero antes...[/b] No te olvides de pasar por la [b][color=green]tienda[/color][/b] a equiparte. ¡Podría haber herramientas útiles para lo que viene![next=auto]
+
+do _on_library_mystery_finished()
+=> END

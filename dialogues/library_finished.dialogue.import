@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://tbgdtyrch7xw"
+path="res://.godot/imported/library_finished.dialogue-a6853c4dae52acc3ef412981bdafa3bd.tres"
+
+[deps]
+
+source_file="res://dialogues/library_finished.dialogue"
+dest_files=["res://.godot/imported/library_finished.dialogue-a6853c4dae52acc3ef412981bdafa3bd.tres"]
+
+[params]
+
+defaults=true

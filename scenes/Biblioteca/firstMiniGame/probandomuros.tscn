@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bslkf8nsmkf25"]
+
+[ext_resource type="Material" uid="uid://3skn5q6h7voe" path="res://assets/3dassets/Godot_4/Furnitures/Material/WoodMaterial.tres" id="1_3clbw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vtpif"]
+
+[node name="muros" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 3.40881, 0, 0, 0, 3.47663, 0, 0, 0)
+material_override = ExtResource("1_3clbw")
+mesh = SubResource("BoxMesh_vtpif")

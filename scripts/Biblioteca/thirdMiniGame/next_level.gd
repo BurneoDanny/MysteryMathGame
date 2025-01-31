@@ -46,7 +46,8 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 							zones.visible = false
 							fondo.modulate = Color(1, 1, 1, 1)
 							animation_player.play("move_6")
-							print('next scene')
+							GameState.library_completed = true
+							SceneTransition.change_scene("res://scenes/Common/TileMap.tscn")
 						else:
 							print("No se encontró el AnimationPlayer.")
 		else:
