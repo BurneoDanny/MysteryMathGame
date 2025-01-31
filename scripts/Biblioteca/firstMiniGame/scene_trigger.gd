@@ -4,7 +4,7 @@ class_name SceneTrigger extends Area2D
 @export var connected_scene: String
 
 # Carpeta base donde están las escenas
-var scene_folder: String = "res://scenes/"
+var scene_folder: String = "res://scenes/Biblioteca/firstMiniGame/"
 
 # Método que se ejecuta cuando un cuerpo entra en el área
 func _on_body_entered(body):

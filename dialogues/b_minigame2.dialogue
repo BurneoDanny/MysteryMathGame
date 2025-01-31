@@ -1,0 +1,45 @@
+~ start
+Bibliotecario: [center][b][color=yellow]📚 Biblioteca de Math City - Sala de Misterios 📚[/color][/b][/center]
+Bibliotecario: [wave]¡Increíble, Hombre Misterio![/wave] [wait=0.5]
+Bibliotecario: Lograste superar al fantasma y escapar del laberinto... [wait=0.5]
+Bibliotecario: [shake]¡Pero mira esto![/shake] [wait=1]
+Bibliotecario: [b][color=red]Cuando el fantasma desapareció, dejó caer esta nota...[/color][/b] [next=auto]
+Bibliotecario: [i][b]"Nunca nos atraparán."[/b][/i] [wait=1]
+Bibliotecario: [b][color=red]Nos atraparán... ¿Quiénes?[/color][/b] [wave]Esto confirma que hay más de un culpable.[/wave] [wait=1]
+
+Bibliotecario: [b]No tenemos tiempo que perder.[/b] [shake]Si queremos recuperar los libros robados, hay que seguir las pistas.[/shake] [wait=1]
+Bibliotecario: El siguiente misterio nos lleva a otra sala de la biblioteca... [wait=1]
+Bibliotecario: [b][color=orange]Una sala donde las portadas de los libros, los títulos y los números han desaparecido.[/color][/b] [wait=1]
+Bibliotecario: Es como si alguien quisiera borrar la historia... [wave]o tal vez esconder algo.[/wave] [wait=1]
+
+~ pregunta_entrada
+Bibliotecario: [b][color=green]¿Listo para el siguiente desafío?[/color][/b]
+
+- *¿Cómo voy a encontrar los títulos si todo está en blanco?*
+	=> explicacion_lupa
+- *¿Qué tengo que hacer exactamente?*
+	=> explicacion_juego
+- *Estoy listo, dime qué hacer.*
+	=> comenzar_misterio
+
+~ explicacion_lupa
+Bibliotecario: [b]Buena pregunta.[/b] [wait=0.5]
+Bibliotecario: Por suerte, tenemos una herramienta especial: [b][color=blue]una lupa mágica.[/color][/b] [wait=1]
+Bibliotecario: Al acercarla a los libros, revelará lo que está oculto en sus etiquetas. [wait=1]
+Bibliotecario: [wave]Números, operaciones matemáticas... todo lo que necesitamos para descifrar este misterio.[/wave] [next=auto]
+=> pregunta_entrada
+
+~ explicacion_juego
+Bibliotecario: [b]Te explico:[/b] [wait=0.5]
+Bibliotecario: La estantería está llena de libros, pero las etiquetas están borrosas o desaparecidas. [wait=1]
+Bibliotecario: [b][color=yellow]Tu misión:[/color][/b] usar la lupa para encontrar la [b]operación matemática correcta[/b] que resuelve un número objetivo. [wait=1]
+Bibliotecario: [b][color=red]Pero cuidado...[/color][/b] si seleccionas el libro incorrecto, podrías perder tiempo. [wait=1]
+Bibliotecario: [wave]¡Concéntrate y usa tu lógica para resolverlo![/wave] [next=auto]
+=> pregunta_entrada
+
+~ comenzar_misterio
+Bibliotecario: [b][color=yellow]¡Vamos, el tiempo es oro![/color][/b] [wait=0.5]
+Bibliotecario: [wave]Si resolvemos esto, estaremos más cerca de descubrir quién está detrás de todo.[/wave] [wait=1]
+Bibliotecario: [b]Adelante, usa la lupa y encuentra los números correctos.[/b] [next=auto]
+do _on_lupa_dialogue_finished()
+=> END

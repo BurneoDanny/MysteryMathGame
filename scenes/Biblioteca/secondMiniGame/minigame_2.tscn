@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://brfx1o34p6v2a"]
+
+[ext_resource type="Texture2D" uid="uid://besjg8f6p2tdc" path="res://assets/art/minigame3/library.png" id="1_713d8"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/minigame_2.gd" id="1_eoecu"]
+[ext_resource type="Texture2D" uid="uid://cdlkm7lytck5" path="res://assets/art/minigame3/libbooktag1.png" id="2_bsdni"]
+[ext_resource type="Texture2D" uid="uid://kf6w4ldckqr1" path="res://assets/art/minigame3/libbook1.png" id="3_v1i0w"]
+[ext_resource type="Script" path="res://scenes/container.gd" id="4_w5qo5"]
+[ext_resource type="Script" path="res://scenes/viewport.gd" id="5_cw321"]
+[ext_resource type="Texture2D" uid="uid://co0fl3fhc6ofh" path="res://assets/biblioteca/Default_A_cartoonstyle_illustration_of_an_enthusiastic_male_li_0_aea277e7-61bc-4dbd-b5c6-b905b9419ad2_0.png" id="6_8724y"]
+[ext_resource type="Texture2D" uid="uid://bovcvru510m55" path="res://assets/2dassets/UI_Pack_Free/UI_Pack_Free/PNG/Button_Right.png" id="8_o0cum"]
+[ext_resource type="Script" path="res://scripts/Common/goto.gd" id="9_hi0kf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnfq5"]
+radius = 130.015
+
+[node name="minigame2" type="Node2D"]
+script = ExtResource("1_eoecu")
+
+[node name="Library" type="Sprite2D" parent="."]
+position = Vector2(958, 541)
+scale = Vector2(1.08008, 1.07227)
+texture = ExtResource("1_713d8")
+
+[node name="Libbooktag1" type="Sprite2D" parent="."]
+position = Vector2(1068, 326)
+scale = Vector2(1.07143, 1.06444)
+texture = ExtResource("2_bsdni")
+
+[node name="Libbook1" type="Sprite2D" parent="."]
+visibility_layer = 4
+position = Vector2(1066, 326)
+scale = Vector2(1.03683, 1.04639)
+texture = ExtResource("3_v1i0w")
+
+[node name="Container" type="SubViewportContainer" parent="."]
+visibility_layer = 2
+offset_left = 503.0
+offset_top = 135.0
+offset_right = 747.0
+offset_bottom = 367.0
+stretch = true
+script = ExtResource("4_w5qo5")
+
+[node name="SubViewport" type="SubViewport" parent="Container"]
+handle_input_locally = false
+canvas_cull_mask = 4294967289
+size = Vector2i(244, 232)
+render_target_update_mode = 4
+script = ExtResource("5_cw321")
+
+[node name="Camera2D" type="Camera2D" parent="Container/SubViewport"]
+zoom = Vector2(2, 2)
+
+[node name="librerian" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(695, 537)
+scale = Vector2(1.49916, 1.63095)
+texture = ExtResource("6_8724y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1803, 110)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_o0cum")
+script = ExtResource("9_hi0kf")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("CircleShape2D_lnfq5")
+
+[connection signal="input_event" from="Sprite2D/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_input_event"]

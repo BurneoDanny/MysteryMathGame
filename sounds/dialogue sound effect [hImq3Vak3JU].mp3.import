@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yqu7mttkso60"
+path="res://.godot/imported/dialogue sound effect [hImq3Vak3JU].mp3-b821bce117e6ed5241e9800dd030056e.mp3str"
+
+[deps]
+
+source_file="res://sounds/dialogue sound effect [hImq3Vak3JU].mp3"
+dest_files=["res://.godot/imported/dialogue sound effect [hImq3Vak3JU].mp3-b821bce117e6ed5241e9800dd030056e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,62 +1,62 @@
 ~ start
 Alcalde: [center][b][color=yellow]🎆 Math City Festival - Día del Gran Misterio 🎆 - Capitulo 1[/color][/b][/center] 
 Alcalde: ¡¡¡Hola!!! [wait=0.5]  
-Alcalde: ¿Eres tú, Hombre Misterio??? [wait=0.5]  
+Alcalde: ¿Eres tú, Hombre Misterio???[wait=0.5]  
 
 - *Responde con sarcasmo*  
-	Hombre Misterio: No, soy su hermano gemelo… ¡pero con bigote! [wait=1]  
-	Alcalde: [shake]¡Pero si tú ya tienes bigote![/shake] [wait=0.5]  
-	Alcalde: Entonces sí eres tú… [wave]¡Qué susto me diste![/wave] [next=1]  
+	Hombre Misterio: No, soy su hermano gemelo… ¡pero con bigote![wait=1]  
+	Alcalde: [shake]¡Pero si tú ya tienes bigote![/shake][wait=0.5]  
+	Alcalde: Entonces sí eres tú… [wave]¡Qué susto me diste![/wave][next=1]  
 	=> continua   
 - *Responde directamente*  
-	Hombre Misterio: Sí, soy yo. ¿Qué ha ocurrido? [next=1]  
+	Hombre Misterio: Sí, soy yo. ¿Qué ha ocurrido?[next=1]  
 	=> continua  
 
 ~ continua 
-Alcalde: ¡Algo terrible ha pasado! [wait=0.5]  
-Alcalde: [b]Soy el alcalde de esta grandiosa ciudad, Math City.[/b] [wait=0.5]  
-Alcalde: Tal vez recuerdes mis grandes discursos, mis geniales corbatas... [wave]o quizás no.[/wave] [wait=1]  
-Alcalde: [b][color=orange]¡Pero basta de charla![/color][/b] Algo terrible ha sucedido... [wait=0.5]  
-Alcalde: ¡El festival está en caos! Han robado el gran diamante del banco, estatuas del museo, animales del zoológico y libros de la biblioteca. [shake]¡Una locura total![/shake] [wait=1]  
-Alcalde: Sé que eres el único que puede resolver esto, pero antes de que vayas...  
-Alcalde: [b][color=green]¿Quieres un consejo sobre alguno de los lugares? Sé algunas cosas que podrían serte útiles.[/color][/b] [wait=0.5]
+Alcalde: ¡Algo terrible ha pasado![wait=0.5]  
+Alcalde: [b]Soy el alcalde de esta grandiosa ciudad, Math City.[/b][wait=0.5]  
+Alcalde: Tal vez recuerdes mis grandes discursos, mis geniales corbatas... [wave]o quizás no.[/wave][wait=1]  
+Alcalde: [b][color=orange]¡Pero basta de charla![/color][/b] Algo terrible ha sucedido...[wait=0.5]  
+Alcalde: ¡El festival está en caos! Han robado el gran diamante del banco, estatuas del museo, animales del zoológico y libros de la biblioteca.[shake]¡Una locura total![/shake] [wait=1]  
+Alcalde: Sé que eres el único que puede resolver esto, pero antes de que vayas...
+Alcalde: [b][color=green]¿Quieres un consejo sobre alguno de los lugares? Sé algunas cosas que podrían serte útiles.[/color][/b][wait=0.5]
 
 ~ elecciones
 - Banco 🏦  
-	Alcalde: [b][color=red]¡El banco![/color][/b] Un lugar lleno de cifras y secretos. [wait=0.5]  
-	Alcalde: Si sigues las pistas correctas, notarás patrones ocultos en los números. [next=auto]  
+	Alcalde: [b][color=red]¡El banco![/color][/b] Un lugar lleno de cifras y secretos.[wait=0.5]  
+	Alcalde: Si sigues las pistas correctas, notarás patrones ocultos en los números.[next=auto]  
 	=> elegir_consejo  
 - Museo 🏛️  
-	Alcalde: [b][color=blue]El museo...[/color][/b] Donde el arte y la historia hablan en formas geométricas. [wait=0.5]  
-	Alcalde: Te será útil recordar la simetría y las proporciones. [next=auto]  
+	Alcalde: [b][color=blue]El museo...[/color][/b] Donde el arte y la historia hablan en formas geométricas.[wait=0.5]  
+	Alcalde: Te será útil recordar la simetría y las proporciones.[next=auto]  
 	=> elegir_consejo  
 - Zoológico 🦁  
-	Alcalde: [b][color=green]El zoológico,[/color][/b] donde los animales han desaparecido sin dejar rastro. [wait=0.5]  
-	Alcalde: ¡A veces la naturaleza oculta mensajes en sus patrones! [next=auto]  
+	Alcalde: [b][color=green]El zoológico,[/color][/b] donde los animales han desaparecido sin dejar rastro.[wait=0.5]  
+	Alcalde: ¡A veces la naturaleza oculta mensajes en sus patrones![next=auto]  
 	=> elegir_consejo  
 - Biblioteca 📚  
-	Alcalde: [b][color=purple]La biblioteca,[/color][/b] un templo de sabiduría. [wait=0.5]  
-	Alcalde: Allí encontrarás acertijos de lógica y secuencias matemáticas. Algunos me dicen que hay fantasmas... [next=auto]  
+	Alcalde: [b][color=purple]La biblioteca,[/color][/b] un templo de sabiduría.[wait=0.5]  
+	Alcalde: Allí encontrarás acertijos de lógica y secuencias matemáticas. Algunos me dicen que hay fantasmas...[next=auto]  
 	=> elegir_consejo  
-- No necesito consejos, gracias.  
+- No necesito consejos, gracias.
 	=> despedida  
 
 ~ elegir_consejo  
-Alcalde: ¿Quieres otro consejo o ya estás listo?  => elecciones
+Alcalde: ¿Quieres otro consejo o ya estás listo? => elecciones
 
 ~ despedida  
-Alcalde: ¡Muy bien, confío en ti! [wait=1]  
-Alcalde: [b][color=yellow]Antes de irte...[/color][/b] Tal vez te interese visitar la tienda antes de comenzar tu investigación. [wait=0.5]  
-Alcalde: [shake]Podrías encontrar herramientas útiles ahí.[/shake] [next=auto]  
+Alcalde: ¡Muy bien, confío en ti![wait=1]  
+Alcalde: [b][color=yellow]Antes de irte...[/color][/b] Tal vez te interese visitar la tienda antes de comenzar tu investigación.[wait=0.5]  
+Alcalde: [shake]Podrías encontrar herramientas útiles ahí.[/shake][next=auto]  
 
-- Pregunta: ¿Y qué gano yo resolviendo todo esto?  
-    Alcalde: [b][color=gold]¡Oh, gran Hombre Misterio![/color][/b] [wave]Serás el héroe de Math City.[/wave] [wait=0.5]  
-    Alcalde: Mandaremos a construir una [b]enorme estatua tuya[/b] en la plaza central. [shake]¡Con una lupa gigante y todo![/shake] [wait=1]  
-    Alcalde: Además, recibirás una recompensa en oro... [wait=0.5] ¡una gran suma de dinero! [wave]Ejem… todavía no definimos cuánto.[/wave] [next=auto]  
-    Hombre Misterio: Suena tentador... [wait=0.5] pero lo hago por la justicia. [next=auto]  
+- Pregunta: Gracias.... ¿Y qué gano yo resolviendo todo esto?  
+    Alcalde: [b][color=gold]¡Oh, gran Hombre Misterio![/color][/b] [wave]Serás el héroe de Math City.[/wave][wait=0.5]  
+    Alcalde: Mandaremos a construir una [b]enorme estatua tuya[/b] en la plaza central. [shake]¡Con una lupa gigante y todo![/shake][wait=1]  
+    Alcalde: Además, recibirás una recompensa en oro... [wait=0.5] ¡una gran suma de dinero! [wave]Ejem… todavía no definimos cuánto.[/wave][next=auto]  
+    Hombre Misterio: Suena tentador... [wait=0.5] pero lo hago por la justicia.[next=auto]  
     => continuar_despedida  
 
-- No pregunto, simplemente me despido.  
+- No pregunto, simplemente me despido.
     => continuar_despedida  
 
 ~ continuar_despedida  

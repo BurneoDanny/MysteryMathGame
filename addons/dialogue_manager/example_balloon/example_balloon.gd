@@ -170,3 +170,10 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+
+@onready var talk_sound: AudioStreamPlayer = $TalkSound
+
+func _on_dialogue_label_spoke(letter: String, letter_index: int, speed: float) -> void:
+	if letter == " ":
+		talk_sound.pitch_scale = randf_range(0.8, 1.2) 
+		talk_sound.play()

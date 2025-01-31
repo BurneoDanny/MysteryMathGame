@@ -6,46 +6,40 @@ var assigned_numbers = []
 @onready var character: Sprite2D = $character
 @onready var objects: Node2D = $objects
 @onready var zones: Node2D = $zones
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 func _process(delta: float) -> void:
 	update_timer_label()
 	
 
 func _ready() -> void:
-	objects.visible = true
-	zones.visible = true
-	character.visible = false
-	save_initial_positions()
-	assign_numbers()
-	generate_numbers()
-	update_level_label()
-	##reset_for_next_level()
-	$Timer.start()
-	##introduce_dialogue() 
+	introduce_dialogue() 
 
 func introduce_dialogue() -> void:
 	$Timer.stop()
 	character.visible = true
 	objects.visible = false
 	zones.visible = false
+	sprite_2d.visible = false
 	DialogueManager.show_example_dialogue_balloon(load("res://dialogues/b_minigame3.dialogue"), "start")
 	## goes to _on_dialogue_finished on b_minigame3
 
 func _on_dialogue_finished() -> void:
 	objects.visible = true
 	zones.visible = true
+	sprite_2d.visible = true
 	character.visible = false
 	save_initial_positions()
 	assign_numbers()
 	generate_numbers()
 	update_level_label()
-	##reset_for_next_level()
 	$Timer.start()
 
 func reset_for_next_level() -> void:
 	GameState.current_level += 1
 	if GameState.current_level >= 2 && GameState.current_level <= 5:
 		play_move_animation(GameState.current_level)
+		
 	restore_initial_positions()	
 	assign_numbers()
 	generate_numbers()
@@ -168,6 +162,7 @@ func _on_timer_timeout() -> void:
 	$Timer.start()
 
 func play_move_animation(level: int) -> void:
+	print("level name:", level)
 	var animation_name = "move_" + str(level)
 	var subviewport = $"Container/SubViewport"
 	if subviewport:

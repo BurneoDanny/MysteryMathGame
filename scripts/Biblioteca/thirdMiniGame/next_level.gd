@@ -1,6 +1,10 @@
 extends Sprite2D
 
 @onready var minigame = $".."
+@onready var dragobjects: Node2D = $"../objects"
+@onready var zones: Node2D = $"../zones"
+@onready var fondo: Sprite2D = $"../Fondo"
+@onready var sprite_2d: Sprite2D = $"."
 
 func _ready() -> void:
 	modulate = Color(Color.WHITE, 0.7)
@@ -38,7 +42,11 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 					if scene_3d:
 						var animation_player = scene_3d.get_node("AnimationPlayer")
 						if animation_player:
-							animation_player.play("move_final")
+							dragobjects.visible = false
+							zones.visible = false
+							fondo.modulate = Color(1, 1, 1, 1)
+							animation_player.play("move_6")
+							print('next scene')
 						else:
 							print("No se encontró el AnimationPlayer.")
 		else:

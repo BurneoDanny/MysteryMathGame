@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dd61v6ycyr8d1"
+path="res://.godot/imported/birds colllague.mp3-8afefbab83498485fd8b092d787a28a7.mp3str"
+
+[deps]
+
+source_file="res://addons/dialogue_manager/example_balloon/birds colllague.mp3"
+dest_files=["res://.godot/imported/birds colllague.mp3-8afefbab83498485fd8b092d787a28a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

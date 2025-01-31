@@ -27,6 +27,12 @@ func _process(delta: float) -> void:
 			is_dragging = null
 			z_index = 1
 			var tween = get_tree().create_tween()
+			print("hovered: ", hovered_dropzone)
+			if body_ref:
+				print("drop number: ", body_ref.get("zone_number"))
+			else:
+				print("body_ref es null")
+			print("drag number: ", assigned_number)
 			if hovered_dropzone and body_ref.get("zone_number") == assigned_number:
 				tween.tween_property(self, "position", body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
 				placed_in_dropzone = true
@@ -56,7 +62,9 @@ func _on_area_2d_body_entered(body: StaticBody2D):
 		body_ref = body
 
 func _on_area_2d_body_exited(body):
-	if body.is_in_group('dropzone') and not body.is_occupied:
-		hovered_dropzone = false
+	if not body.is_occupied:
 		body.modulate = Color(Color.WHITE)
-		body_ref = null
+		if body == body_ref:
+			if body.is_in_group('dropzone') and not body.is_occupied:
+				hovered_dropzone = false
+				body_ref = null

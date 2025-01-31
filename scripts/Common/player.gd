@@ -20,7 +20,6 @@ func handle_collision():
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
-		print_debug(collider.name)
 
 func _physics_process(delta):
 	player_movement(delta)

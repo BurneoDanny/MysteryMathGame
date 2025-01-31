@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://civ2bjsmkbodb"]
 
-[ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/minigame.gd" id="1_2eg5v"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/thirdminigame.gd" id="1_2eg5v"]
 [ext_resource type="PackedScene" uid="uid://cc2bw61y2wcj1" path="res://scenes/Biblioteca/thirdMiniGame/Biblioteca3D.tscn" id="3_ii417"]
 [ext_resource type="PackedScene" uid="uid://cmac4lfkilyyr" path="res://scenes/Biblioteca/thirdMiniGame/draggableObject.tscn" id="3_mdes8"]
 [ext_resource type="PackedScene" uid="uid://c2njlrdlcuycn" path="res://scenes/Biblioteca/thirdMiniGame/dropzone.tscn" id="4_0eb4a"]

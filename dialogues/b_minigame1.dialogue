@@ -1,0 +1,62 @@
+~ start
+Bibliotecario: [center][b][color=yellow]📚 Biblioteca de Math City - Sala de Misterios 📚[/color][/b][/center]
+Bibliotecario: [wave]¡Por fin! ¡El gran [b]Hombre Misterio[/b] ha llegado![/wave] [wait=0.5]
+Bibliotecario: ¡Necesitamos tu ayuda de inmediato![wait=1]
+Bibliotecario: [shake]¡La biblioteca ha sido atacada por un misterioso ladrón![/shake] [wait=0.5]
+Bibliotecario: Se han llevado algunos de los libros más valiosos y, peor aún...[wait=0.5]
+Bibliotecario: [b][color=red]¡Algo extraño ha sucedido en las salas de lectura![/color][/b] [wait=1]
+
+Bibliotecario: [b]Las cosas están fuera de lugar, hay pasillos que parecen moverse solos y lo peor...[/b] [wave]se oyen sonidos extraños en la primera sala.[/wave] [wait=1]
+
+~ pregunta_entrada
+Bibliotecario: [b][color=green]¿Quieres saber más sobre lo que ha pasado o prefieres entrar de inmediato?[/color][/b]
+
+- *¿Qué se han robado exactamente?*
+	=> detalles_robo
+- *Háblame de esas salas extrañas.*
+	=> detalles_salas
+- *No hay tiempo, ¡voy directo a la primera sala!*
+	=> primera_sala
+
+~ detalles_robo
+Bibliotecario: [b][color=orange]Los libros robados son ediciones únicas.[/color][/b] [wait=0.5]
+Bibliotecario: Contenían los secretos de los cálculos más antiguos y las claves para entender los acertijos más difíciles del mundo.[wait=1]
+Bibliotecario: [wave]Sin ellos, la biblioteca está incompleta... y algo me dice que son clave en este misterio.[/wave] [wait=1]
+=> pregunta_entrada
+
+~ detalles_salas
+Bibliotecario: Hay [b][color=blue]tres salas misteriosas[/color][/b] en la biblioteca que han cambiado.[wait=0.5]
+Bibliotecario: [b]La primera[/b] es la más inquietante. Nadie se atreve a entrar. Algunos dicen que han visto sombras moverse solas...[shake]¡y han oído susurros en la oscuridad![/shake] [wait=1]
+Bibliotecario: [b]La segunda[/b] sala parece un desastre. Los libros han cambiado de lugar y algunos estan sin titulo ni portada!!!...[wave]¡como si alguien las hubiera borrado a propósito![/wave] [wait=1]
+Bibliotecario: [b]La tercera[/b] es la más extraña. Hay un desorden muy raro... ¿quizás un mensaje secreto? [wait=1]
+Bibliotecario: [b][color=red]Pero primero debes enfrentarte a la primera sala.[/color][/b] [next=auto]
+=> primera_sala
+
+~ primera_sala
+Bibliotecario: [b][color=red]La Sala del Fantasma Matemático.[/color][/b] [shake]Un pasillo oscuro que parece no tener fin.[/shake][wait=1]
+do _on_dialogue_step("scared")
+Bibliotecario: Se dice que un espíritu cuida los libros de la sala, y solo deja pasar a quienes [b]resuelvan sus acertijos[/b].[wait=0.5]
+Bibliotecario: [wave]Las puertas solo se abrirán si eliges correctamente el resultado de una operación matemática.[/wave][wait=1]
+
+Bibliotecario: [b][color=yellow]¡Ten cuidado![/color][/b] Si te equivocas...[shake]volverás al inicio del laberinto.[/shake][wait=1]
+Bibliotecario: Además, hay algo más... [b]extrañas figuras aparecen en los pasillos.[/b][wait=1]
+
+do _on_dialogue_step("normal")
+Bibliotecario: [b][color=purple]Algunos dicen que son ilusiones... otros, que es el fantasma en persona.[/color][/b] [wave]Pero no creo en supersticiones, ¿verdad?[/wave] [wait=1]
+
+Bibliotecario: [b]Para entrar, debes recordar:[/b]  
+Bibliotecario: [b][color=orange]1.[/color][/b] Observa bien las puertas. Cada una tiene un número.  
+Bibliotecario: [b][color=orange]2.[/color][/b] Una operación matemática aparecerá en la pared.  
+Bibliotecario: [b][color=orange]3.[/color][/b] ¡Solo entra por la puerta con el resultado correcto! [shake]Si te equivocas, perderás tiempo o te perderás en el laberinto.[/shake] [wait=1]
+
+Bibliotecario: [b][color=yellow]Ahora dime...[/color][/b] [wave]¿Estás listo para entrar?[/wave]
+
+- *Sí, estoy listo.*
+	=> entrar_laberinto
+
+~ entrar_laberinto
+Bibliotecario: [shake]¡Que tengas suerte, Hombre Misterio![/shake] [wait=1]
+Bibliotecario: [b][color=red]No dejes que el miedo te atrape... ni el fantasma.[/color][/b] [next=auto]
+
+do on_maze_dialogue_finished()
+=> END
