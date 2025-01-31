@@ -41,46 +41,6 @@ size = Vector2i(1920, 1080)
 
 [node name="Biblioteca3d" parent="Container/SubViewport" instance=ExtResource("3_ii417")]
 
-[node name="DropZones" type="Node" parent="."]
-
-[node name="StaticBody2D" parent="DropZones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-560, 98)
-
-[node name="StaticBody2D2" parent="DropZones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-59, 98)
-
-[node name="StaticBody2D3" parent="DropZones" instance=ExtResource("4_0eb4a")]
-position = Vector2(398, 98)
-
-[node name="StaticBody2D4" parent="DropZones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-59, 420)
-
-[node name="StaticBody2D5" parent="DropZones" instance=ExtResource("4_0eb4a")]
-position = Vector2(398, 420)
-
-[node name="StaticBody2D6" parent="DropZones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-560, 420)
-
-[node name="Objects" type="Node" parent="."]
-
-[node name="draggableObject" parent="Objects" instance=ExtResource("3_mdes8")]
-position = Vector2(-282, -311)
-
-[node name="draggableObject2" parent="Objects" instance=ExtResource("3_mdes8")]
-position = Vector2(-96, -311)
-
-[node name="draggableObject3" parent="Objects" instance=ExtResource("3_mdes8")]
-position = Vector2(89, -311)
-
-[node name="draggableObject4" parent="Objects" instance=ExtResource("3_mdes8")]
-position = Vector2(278, -311)
-
-[node name="draggableObject5" parent="Objects" instance=ExtResource("3_mdes8")]
-position = Vector2(-473, -311)
-
-[node name="draggableObject6" parent="Objects" instance=ExtResource("3_mdes8")]
-position = Vector2(467, -311)
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(820, -447)
 scale = Vector2(0.5, 0.5)
@@ -112,6 +72,46 @@ offset_right = 921.0
 offset_bottom = -256.0
 label_settings = SubResource("LabelSettings_2k3bm")
 horizontal_alignment = 1
+
+[node name="objects" type="Node2D" parent="."]
+
+[node name="draggableObject" parent="objects" instance=ExtResource("3_mdes8")]
+position = Vector2(-282, -311)
+
+[node name="draggableObject2" parent="objects" instance=ExtResource("3_mdes8")]
+position = Vector2(-96, -311)
+
+[node name="draggableObject3" parent="objects" instance=ExtResource("3_mdes8")]
+position = Vector2(89, -311)
+
+[node name="draggableObject4" parent="objects" instance=ExtResource("3_mdes8")]
+position = Vector2(278, -311)
+
+[node name="draggableObject5" parent="objects" instance=ExtResource("3_mdes8")]
+position = Vector2(-473, -311)
+
+[node name="draggableObject6" parent="objects" instance=ExtResource("3_mdes8")]
+position = Vector2(467, -311)
+
+[node name="zones" type="Node2D" parent="."]
+
+[node name="StaticBody2D" parent="zones" instance=ExtResource("4_0eb4a")]
+position = Vector2(-560, 98)
+
+[node name="StaticBody2D2" parent="zones" instance=ExtResource("4_0eb4a")]
+position = Vector2(-59, 98)
+
+[node name="StaticBody2D3" parent="zones" instance=ExtResource("4_0eb4a")]
+position = Vector2(398, 98)
+
+[node name="StaticBody2D4" parent="zones" instance=ExtResource("4_0eb4a")]
+position = Vector2(-59, 420)
+
+[node name="StaticBody2D5" parent="zones" instance=ExtResource("4_0eb4a")]
+position = Vector2(398, 420)
+
+[node name="StaticBody2D6" parent="zones" instance=ExtResource("4_0eb4a")]
+position = Vector2(-560, 420)
 
 [connection signal="input_event" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_input_event"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

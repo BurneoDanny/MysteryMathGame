@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cc2bw61y2wcj1"]
+[gd_scene load_steps=31 format=3 uid="uid://cc2bw61y2wcj1"]
 
 [ext_resource type="Texture2D" uid="uid://uxilb4o81c4e" path="res://assets/materials/wood_floor_deck_4k/textures/wood_floor_deck_diff_4k.png" id="1_umx82"]
 [ext_resource type="Texture2D" uid="uid://dnxyr00i58r02" path="res://assets/materials/wood_floor_deck_4k/textures/wood_floor_deck_nor_gl_4k.png" id="2_y18xv"]
@@ -73,22 +73,6 @@ uv1_scale = Vector3(40, 40, 40)
 [sub_resource type="BoxMesh" id="BoxMesh_i2gfe"]
 material = SubResource("StandardMaterial3D_g3j4f")
 
-[sub_resource type="Animation" id="Animation_7buet"]
-resource_name = "initial_move"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_b8urt"]
 length = 0.001
 tracks/0/type = "value"
@@ -115,9 +99,185 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 1.438, 2.617)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("books1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("books4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("books5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("books6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("books2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2tt1y"]
+resource_name = "move_4"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.438, 8.971), Vector3(0, 1.438, 14.6068)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("books5:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("books6:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_gum07"]
+resource_name = "move_5"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.438, 14.607), Vector3(-1.23707, 1.438, 4.07187)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, 1.28224, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("books6:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("books2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("books1:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_vmht7"]
-resource_name = "second_move"
+resource_name = "move_2"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -131,9 +291,33 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("books1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("books4:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
 
 [sub_resource type="Animation" id="Animation_ke6au"]
-resource_name = "third_move"
+resource_name = "move_3"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -145,7 +329,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 1.438, 2.617), Vector3(0, 1.438, 5.92224)]
+"values": [Vector3(0, 1.438, 2.617), Vector3(0, 1.438, 8.97099)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -159,9 +343,73 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("books4:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("books5:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
-[sub_resource type="Animation" id="Animation_2tt1y"]
-resource_name = "fourth_move"
+[sub_resource type="Animation" id="Animation_7buet"]
+resource_name = "move_1"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("books1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_mohar"]
+resource_name = "move_final"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -170,29 +418,68 @@ tracks/0/path = NodePath("Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.23707, 1.438, 4.07187)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.28224, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("books2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.438, 5.92224), Vector3(0, 1.438, 11.2288)]
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_84cdr"]
 _data = {
 "RESET": SubResource("Animation_b8urt"),
-"fourth_move": SubResource("Animation_2tt1y"),
-"initial_move": SubResource("Animation_7buet"),
-"second_move": SubResource("Animation_vmht7"),
-"third_move": SubResource("Animation_ke6au")
+"move_1": SubResource("Animation_7buet"),
+"move_2": SubResource("Animation_vmht7"),
+"move_3": SubResource("Animation_ke6au"),
+"move_4": SubResource("Animation_2tt1y"),
+"move_5": SubResource("Animation_gum07"),
+"move_final": SubResource("Animation_mohar")
 }
 
 [node name="Biblioteca3d" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00854087, 0.00854659, -1.13399)
+visible = false
 
 [node name="floor" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_wo1cp")
 
 [node name="ceiling" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 5.53493, 0)
+transform = Transform3D(1, 0, 0, 0, -1, 1.4654e-07, 0, -8.74228e-08, -1.67623, 0, 5.53493, 0)
 mesh = SubResource("PlaneMesh_wo1cp")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -227,6 +514,7 @@ freeze = true
 
 [node name="books1" type="Node3D" parent="."]
 transform = Transform3D(-1.14172e-08, 0.261195, 0.965286, -4.2194e-08, 0.965286, -0.261195, -1, -4.37114e-08, 2.25354e-15, -2.15986, 0.920139, 0.298013)
+visible = false
 
 [node name="book-01" parent="books1" instance=ExtResource("11_miwh6")]
 transform = Transform3D(-1.14172e-08, -4.2194e-08, -1, 0.261195, 0.965286, -4.37114e-08, 0.965286, -0.261195, -1.77636e-15, 0.0501279, 1.0595, 1.48081)
@@ -597,6 +885,7 @@ freeze = true
 
 [node name="books2" type="Node3D" parent="."]
 transform = Transform3D(0.0494947, 0, 0.998774, 0, 1, 0, -0.998774, 0, 0.0494947, -3.25879, 1.55608, 3.6531)
+visible = false
 
 [node name="book-87" parent="books2" instance=ExtResource("11_miwh6")]
 
@@ -964,6 +1253,7 @@ freeze = true
 
 [node name="books4" type="Node3D" parent="."]
 transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 2.8701, 1.55608, 2.87662)
+visible = false
 
 [node name="book-87" parent="books4" instance=ExtResource("11_miwh6")]
 
@@ -1297,18 +1587,72 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.64253, 0, -0.00845242)
 [node name="Furniture_Shelf_8" parent="shelves5" instance=ExtResource("4_d6au6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81147, 0, -0.00845242)
 
-[node name="cabinets5" type="Node3D" parent="."]
-transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 3.07584, 4.03283, 7.92984)
+[node name="candles5" type="Node3D" parent="."]
+transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 2.66525, 1.55608, 8.5545)
 
-[node name="Furniture_Cabinet_7" parent="cabinets5" instance=ExtResource("9_nvibe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91914, 0, 0)
-freeze = true
+[node name="mum6" parent="candles5" instance=ExtResource("8_6aso1")]
+transform = Transform3D(0.08, 0, -4.65661e-10, 0, 0.08, 0, 4.65661e-10, 0, 0.08, -0.885297, 0.776757, 0.160493)
 
-[node name="Furniture_Cabinet_8" parent="cabinets5" instance=ExtResource("9_nvibe")]
-freeze = true
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_hthow")
+draw_pass_1 = SubResource("SphereMesh_ubx7w")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum6"]
+transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
+
+[node name="mum7" parent="candles5" instance=ExtResource("8_6aso1")]
+transform = Transform3D(0.08, 0, -4.65661e-10, 0, 0.08, 0, 4.65661e-10, 0, 0.08, 1.60889, 0.776757, 0.132313)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_hthow")
+draw_pass_1 = SubResource("SphereMesh_ubx7w")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum7"]
+transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
+
+[node name="mum8" parent="candles5" instance=ExtResource("8_6aso1")]
+transform = Transform3D(0.0499803, 0, -0.0624658, 0, 0.08, 0, 0.0624658, 0, 0.0499803, -0.464967, -1.58871, 0.363553)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_hthow")
+draw_pass_1 = SubResource("SphereMesh_ubx7w")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum8"]
+transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
+
+[node name="mum9" parent="candles5" instance=ExtResource("8_6aso1")]
+transform = Transform3D(0.0499803, 0, -0.0624658, 0, 0.08, 0, 0.0624658, 0, 0.0499803, -0.711177, -1.58871, 0.443102)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_hthow")
+draw_pass_1 = SubResource("SphereMesh_ubx7w")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum9"]
+transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
+
+[node name="mum10" parent="candles5" instance=ExtResource("8_6aso1")]
+transform = Transform3D(0.109332, 0, -0.136644, 0, 0.175, 0, 0.136644, 0, 0.109332, 1.61872, -1.58871, 0.378843)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_hthow")
+draw_pass_1 = SubResource("SphereMesh_ubx7w")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum10"]
+transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
 
 [node name="books5" type="Node3D" parent="."]
 transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 2.66525, 1.55608, 8.5545)
+visible = false
 
 [node name="book-87" parent="books5" instance=ExtResource("11_miwh6")]
 
@@ -1567,68 +1911,361 @@ transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 
 [node name="book-172" parent="books5" instance=ExtResource("11_miwh6")]
 transform = Transform3D(-5.58794e-08, 0.261195, 0.965286, -4.2194e-08, 0.965286, -0.261195, -1, -5.4948e-08, -4.09782e-08, -1.70614, -0.635944, 0.0501277)
 
-[node name="candles5" type="Node3D" parent="."]
-transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 2.66525, 1.55608, 8.5545)
+[node name="shelves6" type="Node3D" parent="."]
+transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 2.82873, 1.18237, 11.0353)
 
-[node name="mum6" parent="candles5" instance=ExtResource("8_6aso1")]
+[node name="Furniture_Shelf_5" parent="shelves6" instance=ExtResource("4_d6au6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72649, 0, -0.00845242)
+
+[node name="Furniture_Shelf_7" parent="shelves6" instance=ExtResource("4_d6au6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.64253, 0, -0.00845242)
+
+[node name="Furniture_Shelf_8" parent="shelves6" instance=ExtResource("4_d6au6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81147, 0, -0.00845242)
+
+[node name="candles6" type="Node3D" parent="."]
+transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 2.46715, 1.55608, 14.2952)
+
+[node name="mum6" parent="candles6" instance=ExtResource("8_6aso1")]
 transform = Transform3D(0.08, 0, -4.65661e-10, 0, 0.08, 0, 4.65661e-10, 0, 0.08, -0.885297, 0.776757, 0.160493)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum6"]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles6/mum6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_hthow")
 draw_pass_1 = SubResource("SphereMesh_ubx7w")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum6"]
+[node name="OmniLight3D" type="OmniLight3D" parent="candles6/mum6"]
 transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
 
-[node name="mum7" parent="candles5" instance=ExtResource("8_6aso1")]
+[node name="mum7" parent="candles6" instance=ExtResource("8_6aso1")]
 transform = Transform3D(0.08, 0, -4.65661e-10, 0, 0.08, 0, 4.65661e-10, 0, 0.08, 1.60889, 0.776757, 0.132313)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum7"]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles6/mum7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_hthow")
 draw_pass_1 = SubResource("SphereMesh_ubx7w")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum7"]
+[node name="OmniLight3D" type="OmniLight3D" parent="candles6/mum7"]
 transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
 
-[node name="mum8" parent="candles5" instance=ExtResource("8_6aso1")]
+[node name="mum8" parent="candles6" instance=ExtResource("8_6aso1")]
 transform = Transform3D(0.0499803, 0, -0.0624658, 0, 0.08, 0, 0.0624658, 0, 0.0499803, -0.464967, -1.58871, 0.363553)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum8"]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles6/mum8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_hthow")
 draw_pass_1 = SubResource("SphereMesh_ubx7w")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum8"]
+[node name="OmniLight3D" type="OmniLight3D" parent="candles6/mum8"]
 transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
 
-[node name="mum9" parent="candles5" instance=ExtResource("8_6aso1")]
+[node name="mum9" parent="candles6" instance=ExtResource("8_6aso1")]
 transform = Transform3D(0.0499803, 0, -0.0624658, 0, 0.08, 0, 0.0624658, 0, 0.0499803, -0.711177, -1.58871, 0.443102)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum9"]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles6/mum9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_hthow")
 draw_pass_1 = SubResource("SphereMesh_ubx7w")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum9"]
+[node name="OmniLight3D" type="OmniLight3D" parent="candles6/mum9"]
 transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
 
-[node name="mum10" parent="candles5" instance=ExtResource("8_6aso1")]
+[node name="mum10" parent="candles6" instance=ExtResource("8_6aso1")]
 transform = Transform3D(0.109332, 0, -0.136644, 0, 0.175, 0, 0.136644, 0, 0.109332, 1.61872, -1.58871, 0.378843)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="candles5/mum10"]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="candles6/mum10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18338, 0)
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_hthow")
 draw_pass_1 = SubResource("SphereMesh_ubx7w")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="candles5/mum10"]
+[node name="OmniLight3D" type="OmniLight3D" parent="candles6/mum10"]
 transform = Transform3D(5.71429, 0, 0, 0, 5.71429, 0, 0, 0, 5.71429, 0, 1.90924, 0)
+
+[node name="books6" type="Node3D" parent="."]
+transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 2.46715, 1.55608, 14.2952)
+visible = false
+
+[node name="book-87" parent="books6" instance=ExtResource("11_miwh6")]
+
+[node name="book-88" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1, -2.57572e-14, -1.49012e-07, 0, 1, -1.74846e-07, 1.49012e-07, -1.74846e-07, -1, 0.451176, -0.00103009, 2.38419e-07)
+
+[node name="book-89" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1, -2.57572e-14, -1.49012e-07, 0, 1, -1.74846e-07, 1.49012e-07, -1.74846e-07, -1, 0.451176, 0.05572, 2.38419e-07)
+
+[node name="book-90" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(0.265287, 0.96417, -1.49012e-07, 0.96417, -0.265287, 1.29286e-07, 8.56817e-08, -1.82539e-07, -1, 0.647192, 0.066, 0)
+
+[node name="book-91" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(0.265287, 0.96417, -1.49012e-07, 0.96417, -0.265287, 1.29286e-07, 8.56817e-08, -1.82539e-07, -1, 0.707249, 0.0709599, 0)
+
+[node name="book-92" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.986462, 0.11132, 0.0499074)
+
+[node name="book-93" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.960692, -0.277617, 4.1919e-08, -0.277617, -0.960692, -1, -1.08033e-07, -1.30385e-08, 0.783932, 0.11132, 0.0499077)
+
+[node name="book-94" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.925061, 0.11132, 0.0501282)
+
+[node name="book-95" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90608, 0, 0)
+
+[node name="book-96" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1, -2.57572e-14, -1.49012e-07, 0, 1, -1.74846e-07, 1.49012e-07, -1.74846e-07, -1, -1.45491, -0.00103009, 0)
+
+[node name="book-97" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1, -2.57572e-14, -1.49012e-07, 0, 1, -1.74846e-07, 1.49012e-07, -1.74846e-07, -1, -1.45491, 0.05572, 0)
+
+[node name="book-98" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(0.265287, 0.96417, -1.49012e-07, 0.96417, -0.265287, 1.29286e-07, 8.56817e-08, -1.82539e-07, -1, -1.25889, 0.066, 0)
+
+[node name="book-99" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(0.265287, 0.96417, -1.49012e-07, 0.96417, -0.265287, 1.29286e-07, 8.56817e-08, -1.82539e-07, -1, -1.19883, 0.0709599, 0)
+
+[node name="book-100" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.919618, 0.11132, 0.0499077)
+
+[node name="book-101" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.960692, -0.277617, 4.1919e-08, -0.277617, -0.960692, -1, -1.08033e-07, -1.30385e-08, -1.12215, 0.11132, 0.0499077)
+
+[node name="book-102" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.981019, 0.11132, 0.050128)
+
+[node name="book-103" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 1.00346, -0.54334, 0.0501282)
+
+[node name="book-104" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.953093, -0.54334, 0.0501282)
+
+[node name="book-105" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.903386, -0.54334, 0.050128)
+
+[node name="book-106" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.846497, -0.54334, 0.050128)
+
+[node name="book-107" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.995588, -1.21149, 0.0501282)
+
+[node name="book-108" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.0906076, -1.21149, 0.050128)
+
+[node name="book-109" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.0368137, -1.21149, 0.050128)
+
+[node name="book-110" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.0168371, -1.21149, 0.050128)
+
+[node name="book-111" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.070189, -1.21149, 0.050128)
+
+[node name="book-112" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.939581, -1.21149, 0.050128)
+
+[node name="book-113" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.47035e-08, -7.10543e-15, 1, -1.50996e-07, -1, 2.5411e-21, 1, -1.50996e-07, -4.47035e-08, 0.402839, -1.32218, 0.162091)
+
+[node name="book-114" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-0.354797, 5.35728e-08, 0.934943, -1.50996e-07, -1, -2.87815e-14, 0.934943, -1.41173e-07, 0.354797, 0.732882, -1.32218, 0.0360422)
+
+[node name="book-115" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(0.636078, 0.76537, 0.0980463, 0, 0.127065, -0.991894, -0.771625, 0.630922, 0.080823, 0.199343, -1.21149, 0.050128)
+
+[node name="book-116" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.95483, 0.11227, 0.0501282)
+
+[node name="book-117" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 1.86863, 0.11227, 0.050128)
+
+[node name="book-118" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 1.92242, 0.11227, 0.050128)
+
+[node name="book-119" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 1.97608, 0.11227, 0.050128)
+
+[node name="book-120" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.02943, 0.11227, 0.050128)
+
+[node name="book-121" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.89882, 0.11227, 0.050128)
+
+[node name="book-122" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.47035e-08, -7.10543e-15, 1, -1.50996e-07, -1, 2.5411e-21, 1, -1.50996e-07, -4.47035e-08, 2.36208, 0.00156999, 0.162091)
+
+[node name="book-123" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-0.354797, 5.35728e-08, 0.934943, -1.50996e-07, -1, -2.87815e-14, 0.934943, -1.41173e-07, 0.354797, 2.69212, 0.00156999, 0.0360425)
+
+[node name="book-124" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(0.636078, 0.76537, 0.0980463, 0, 0.127065, -0.991894, -0.771625, 0.630922, 0.080823, 2.15858, 0.11227, 0.0501282)
+
+[node name="book-125" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.782616, -0.54334, 0.0501277)
+
+[node name="book-126" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.955134, -0.296175, 4.47212e-08, -0.296175, -0.955134, -1, -1.08033e-07, -1.30385e-08, 0.681792, -0.54334, 0.0501282)
+
+[node name="book-127" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.955134, -0.296175, 4.47212e-08, -0.296175, -0.955134, -1, -1.08033e-07, -1.30385e-08, 0.623748, -0.54334, 0.050128)
+
+[node name="book-128" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.84288e-08, -0.0220941, -0.999756, 1.50959e-07, -0.999756, 0.0220941, -1, -1.52155e-07, -4.47035e-08, 0.401511, -0.68033, 0.050128)
+
+[node name="book-129" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.84288e-08, -0.0220941, -0.999756, 1.50959e-07, -0.999756, 0.0220941, -1, -1.52155e-07, -4.47035e-08, 0.401511, -0.644391, 0.050128)
+
+[node name="book-130" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-0.743145, -0.0151807, -0.668959, -1.49019e-07, -0.999743, 0.0226873, -0.669131, 0.01686, 0.742954, 0.102711, -0.644391, 0.050128)
+
+[node name="book-131" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.82891, -0.54334, 0.050128)
+
+[node name="book-132" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.77854, -0.54334, 0.050128)
+
+[node name="book-133" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.72883, -0.54334, 0.050128)
+
+[node name="book-134" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.67194, -0.54334, 0.0501282)
+
+[node name="book-135" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.60806, -0.54334, 0.0501282)
+
+[node name="book-136" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.955134, -0.296175, 4.47212e-08, -0.296175, -0.955134, -1, -1.08033e-07, -1.30385e-08, 2.50724, -0.54334, 0.050128)
+
+[node name="book-137" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.955134, -0.296175, 4.47212e-08, -0.296175, -0.955134, -1, -1.08033e-07, -1.30385e-08, 2.4492, -0.54334, 0.050128)
+
+[node name="book-138" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.84288e-08, -0.0220941, -0.999756, 1.50959e-07, -0.999756, 0.0220941, -1, -1.52155e-07, -4.47035e-08, 2.22696, -0.68033, 0.0501282)
+
+[node name="book-139" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.84288e-08, -0.0220941, -0.999756, 1.50959e-07, -0.999756, 0.0220941, -1, -1.52155e-07, -4.47035e-08, 2.22696, -0.644391, 0.0501282)
+
+[node name="book-140" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-0.743145, -0.0151807, -0.668959, -1.49019e-07, -0.999743, 0.0226873, -0.669131, 0.01686, 0.742954, 1.92816, -0.644391, 0.050128)
+
+[node name="book-141" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.82891, -1.21021, 0.050128)
+
+[node name="book-142" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.77854, -1.21021, 0.050128)
+
+[node name="book-143" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.72883, -1.21021, 0.050128)
+
+[node name="book-144" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.67194, -1.21021, 0.0501282)
+
+[node name="book-145" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 2.60806, -1.21021, 0.0501282)
+
+[node name="book-146" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.955134, -0.296175, 4.47212e-08, -0.296175, -0.955134, -1, -1.08033e-07, -1.30385e-08, 2.50724, -1.21021, 0.050128)
+
+[node name="book-147" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.955134, -0.296175, 4.47212e-08, -0.296175, -0.955134, -1, -1.08033e-07, -1.30385e-08, 2.4492, -1.21021, 0.050128)
+
+[node name="book-148" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.84288e-08, -0.0220941, -0.999756, 1.50959e-07, -0.999756, 0.0220941, -1, -1.52155e-07, -4.47035e-08, 2.22696, -1.3472, 0.0501282)
+
+[node name="book-149" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.84288e-08, -0.0220941, -0.999756, 1.50959e-07, -0.999756, 0.0220941, -1, -1.52155e-07, -4.47035e-08, 2.22696, -1.31126, 0.0501282)
+
+[node name="book-150" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-0.743145, -0.0151807, -0.668959, -1.49019e-07, -0.999743, 0.0226873, -0.669131, 0.01686, 0.742954, 1.92816, -1.31126, 0.050128)
+
+[node name="book-151" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.833728, -1.21021, 0.050128)
+
+[node name="book-152" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.884098, -1.21021, 0.0501277)
+
+[node name="book-153" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.933798, -1.21021, 0.050128)
+
+[node name="book-154" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.990688, -1.21021, 0.050128)
+
+[node name="book-155" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -1.05457, -1.21021, 0.0501282)
+
+[node name="book-156" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.955134, -0.296175, 4.47212e-08, -0.296175, -0.955134, -1, -1.08033e-07, -1.30385e-08, -1.1554, -1.21021, 0.050128)
+
+[node name="book-157" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.955134, -0.296175, 4.47212e-08, -0.296175, -0.955134, -1, -1.08033e-07, -1.30385e-08, -1.21344, -1.21021, 0.050128)
+
+[node name="book-158" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.84288e-08, -0.0220941, -0.999756, 1.50959e-07, -0.999756, 0.0220941, -1, -1.52155e-07, -4.47035e-08, -1.43568, -1.3472, 0.0501282)
+
+[node name="book-159" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(4.84288e-08, -0.0220941, -0.999756, 1.50959e-07, -0.999756, 0.0220941, -1, -1.52155e-07, -4.47035e-08, -1.43568, -1.31126, 0.0501282)
+
+[node name="book-160" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-0.743145, -0.0151807, -0.668959, -1.49019e-07, -0.999743, 0.0226873, -0.669131, 0.01686, 0.742954, -1.73448, -1.31126, 0.0501282)
+
+[node name="book-161" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, 0.865938, 0.11132, 0.050128)
+
+[node name="book-162" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-5.58794e-08, 0.261195, 0.965286, -4.2194e-08, 0.965286, -0.261195, -1, -5.4948e-08, -4.09782e-08, 0.18401, 0.04188, 0.050128)
+
+[node name="book-163" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89015, -0.677822, 0)
+
+[node name="book-164" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1, -2.57572e-14, -1.49012e-07, 0, 1, -1.74846e-07, 1.49012e-07, -1.74846e-07, -1, -1.43897, -0.678851, 0)
+
+[node name="book-165" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1, -2.57572e-14, -1.49012e-07, 0, 1, -1.74846e-07, 1.49012e-07, -1.74846e-07, -1, -1.43897, -0.622103, 0)
+
+[node name="book-166" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(0.265287, 0.96417, -1.49012e-07, 0.96417, -0.265287, 1.29286e-07, 8.56817e-08, -1.82539e-07, -1, -1.24296, -0.611823, 0)
+
+[node name="book-167" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(0.265287, 0.96417, -1.49012e-07, 0.96417, -0.265287, 1.29286e-07, 8.56817e-08, -1.82539e-07, -1, -1.1829, -0.60686, 0)
+
+[node name="book-168" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.903688, -0.566504, 0.0499077)
+
+[node name="book-169" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-1.00583e-07, 0.960692, -0.277617, 4.1919e-08, -0.277617, -0.960692, -1, -1.08033e-07, -1.30385e-08, -1.10621, -0.566504, 0.0499077)
+
+[node name="book-170" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.965088, -0.566504, 0.050128)
+
+[node name="book-171" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -1.02421, -0.566504, 0.050128)
+
+[node name="book-172" parent="books6" instance=ExtResource("11_miwh6")]
+transform = Transform3D(-5.58794e-08, 0.261195, 0.965286, -4.2194e-08, 0.965286, -0.261195, -1, -5.4948e-08, -4.09782e-08, -1.70614, -0.635944, 0.0501277)
+
+[node name="cabinets5" type="Node3D" parent="."]
+transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 3.07584, 4.03283, 7.92984)
+
+[node name="Furniture_Cabinet_7" parent="cabinets5" instance=ExtResource("9_nvibe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91914, 0, 0)
+freeze = true
+
+[node name="Furniture_Cabinet_8" parent="cabinets5" instance=ExtResource("9_nvibe")]
+freeze = true
+
+[node name="cabinets6" type="Node3D" parent="."]
+transform = Transform3D(-0.0373937, 0, -0.999301, 0, 1, 0, 0.999301, 0, -0.0373937, 3.07584, 4.05832, 13.7238)
+
+[node name="Furniture_Cabinet_7" parent="cabinets6" instance=ExtResource("9_nvibe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91914, 0, 0)
+freeze = true
+
+[node name="Furniture_Cabinet_8" parent="cabinets6" instance=ExtResource("9_nvibe")]
+freeze = true
 
 [node name="telas4" type="Node3D" parent="."]
 transform = Transform3D(-0.556251, 0, -0.999301, 0, 9.45179, 0, 14.8651, 0, -0.0373937, 4.13711, 1.19693, 3.37807)
@@ -1649,11 +2286,11 @@ mesh = SubResource("PlaneMesh_ufyat")
 skeleton = NodePath("../..")
 
 [node name="Wall4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.556251, 0, -0.999301, 0, 9.45179, 0, 14.8651, 0, -0.0373937, 4.03839, 1.19693, 5.3702)
+transform = Transform3D(-1.55081, 0, -0.948565, 0, 9.45179, 0, 41.4434, 0, -0.0354952, 4.03839, 1.19693, 5.3702)
 mesh = SubResource("BoxMesh_i2gfe")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_84cdr")
 }
-autoplay = "initial_move"
+autoplay = "move_1"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bryrb36mirnp5"
+path="res://.godot/imported/welcoming.dialogue-48c82b3d2d08d9fefa2d4b874c200b26.tres"
+
+[deps]
+
+source_file="res://dialogues/welcoming.dialogue"
+dest_files=["res://.godot/imported/welcoming.dialogue-48c82b3d2d08d9fefa2d4b874c200b26.tres"]
+
+[params]
+
+defaults=true

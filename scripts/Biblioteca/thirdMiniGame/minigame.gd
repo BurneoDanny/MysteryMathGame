@@ -16,8 +16,8 @@ func _process(delta: float) -> void:
 	
 func reset_for_next_level() -> void:
 	GameState.current_level += 1
-	if GameState.current_level == 2:
-		play_second_move_animation()
+	if GameState.current_level >= 2 && GameState.current_level <= 5:
+		play_move_animation(GameState.current_level)
 	restore_initial_positions()	
 	assign_numbers()
 	generate_numbers()
@@ -141,21 +141,33 @@ func _on_timer_timeout() -> void:
 	update_level_label()
 	$Timer.start()
 
-func play_second_move_animation() -> void:
+func play_move_animation(level: int) -> void:
+	var animation_name = "move_" + str(level)
 	var subviewport = $"Container/SubViewport"
 	if subviewport:
 		var scene_3d = subviewport.get_node("Biblioteca3d")
 		if scene_3d:
-			var animation_player = scene_3d.get_node("AnimationPlayer")
-			if animation_player:
-				print("Reproduciendo animación: second_move")
-				animation_player.play("second_move")
-			else:
-				print("No se encontró el AnimationPlayer.")
+				var animation_player = scene_3d.get_node("AnimationPlayer")
+				if animation_player:
+					$objects.visible = false
+					$zones.visible = false
+					$Fondo.modulate = Color(1, 1, 1, 1)  # Totalmente opaco
+					animation_player.play(animation_name)
+					animation_player.connect("animation_finished", Callable(self, "_on_animation_finished"))
+				else:
+					print("No se encontró el AnimationPlayer.")
 		else:
 			print("No se encontró la escena 3D dentro del SubViewport.")
 	else:
 		print("No se encontró el SubViewport.")
+
+# Función para manejar el evento cuando la animación termina
+func _on_animation_finished(anim_name: String) -> void:
+	if anim_name.begins_with("move_"):
+		$Fondo.modulate = Color(1, 1, 1, 0.5) 
+		$objects.visible = true
+		$zones.visible = true
+
 
 func update_level_label() -> void:
 	var level_label = $level

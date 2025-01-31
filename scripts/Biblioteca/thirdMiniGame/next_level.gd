@@ -29,9 +29,17 @@ func all_books_in_place() -> bool:
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if all_books_in_place():
-			if GameState.current_level < GameState.max_levels:
+			if GameState.current_level < GameState.max_levels and GameState.current_level != 5:
 				minigame.reset_for_next_level()
-			else:
-				print("¡Has completado todos los niveles!")
+			elif GameState.current_level ==  5:
+				var subviewport = $"../Container/SubViewport"
+				if subviewport:
+					var scene_3d = subviewport.get_node("Biblioteca3d")
+					if scene_3d:
+						var animation_player = scene_3d.get_node("AnimationPlayer")
+						if animation_player:
+							animation_player.play("move_final")
+						else:
+							print("No se encontró el AnimationPlayer.")
 		else:
 			print("Todos los libros deben estar en las zonas correctas antes de continuar.")
