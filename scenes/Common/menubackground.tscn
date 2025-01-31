@@ -1,18 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bs3gs7ckoak7"]
+[gd_scene load_steps=4 format=3 uid="uid://bs3gs7ckoak7"]
 
-[ext_resource type="Texture2D" uid="uid://pd2m4qr7duda" path="res://assets/2dassets/textures/forrest_ground_01_diff_4k.png" id="1_fvdvw"]
-[ext_resource type="Texture2D" uid="uid://injmt1n2hkpj" path="res://assets/2dassets/textures/forrest_ground_01_nor_gl_4k.png" id="2_aadhd"]
-[ext_resource type="Texture2D" uid="uid://c68er5asosgfj" path="res://assets/2dassets/textures/forrest_ground_01_rough_4k.png" id="3_tgs3i"]
 [ext_resource type="PackedScene" uid="uid://b7vrwo7vcq52x" path="res://assets/3dassets/Godot_4/Furnitures/Scenes/furniture/furniture_chair_2.tscn" id="5_fpr7n"]
 [ext_resource type="PackedScene" uid="uid://dvyxccotdydm4" path="res://assets/3dassets/Godot_4/Furnitures/Scenes/furniture/furniture_table_2.tscn" id="6_jgx88"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0elq"]
-albedo_color = Color(0.30443, 0.622135, 0.282152, 1)
-albedo_texture = ExtResource("1_fvdvw")
-roughness_texture = ExtResource("3_tgs3i")
-normal_enabled = true
-normal_texture = ExtResource("2_aadhd")
-uv1_scale = Vector3(100, 100, 100)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_67sd0"]
 
@@ -20,7 +9,6 @@ uv1_scale = Vector3(100, 100, 100)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 1.8061, -0.564928, -0.514373)
-material_override = SubResource("StandardMaterial3D_t0elq")
 mesh = SubResource("PlaneMesh_67sd0")
 
 [node name="WorldEnvironment_EpicBlueSunset" type="WorldEnvironment" parent="."]
