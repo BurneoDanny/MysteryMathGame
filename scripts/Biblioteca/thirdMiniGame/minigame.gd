@@ -3,17 +3,45 @@ extends Node2D
 var initial_positions = {}
 var assigned_numbers = []
 @onready var time_panel = $timerlabel
-
-func _ready() -> void:
-	save_initial_positions()
-	assign_numbers()
-	generate_numbers()
-	update_level_label()
-	$Timer.start()
+@onready var character: Sprite2D = $character
+@onready var objects: Node2D = $objects
+@onready var zones: Node2D = $zones
 
 func _process(delta: float) -> void:
 	update_timer_label()
 	
+
+func _ready() -> void:
+	objects.visible = true
+	zones.visible = true
+	character.visible = false
+	save_initial_positions()
+	assign_numbers()
+	generate_numbers()
+	update_level_label()
+	##reset_for_next_level()
+	$Timer.start()
+	##introduce_dialogue() 
+
+func introduce_dialogue() -> void:
+	$Timer.stop()
+	character.visible = true
+	objects.visible = false
+	zones.visible = false
+	DialogueManager.show_example_dialogue_balloon(load("res://dialogues/b_minigame3.dialogue"), "start")
+	## goes to _on_dialogue_finished on b_minigame3
+
+func _on_dialogue_finished() -> void:
+	objects.visible = true
+	zones.visible = true
+	character.visible = false
+	save_initial_positions()
+	assign_numbers()
+	generate_numbers()
+	update_level_label()
+	##reset_for_next_level()
+	$Timer.start()
+
 func reset_for_next_level() -> void:
 	GameState.current_level += 1
 	if GameState.current_level >= 2 && GameState.current_level <= 5:
@@ -23,7 +51,6 @@ func reset_for_next_level() -> void:
 	generate_numbers()
 	update_level_label()
 	$Timer.start()
-	
 
 func save_initial_positions() -> void:
 	var objects = get_tree().get_nodes_in_group("draggable_object")
@@ -32,7 +59,6 @@ func save_initial_positions() -> void:
 		initial_positions[obj] = obj.global_position
 	for zone in dropzones:
 		initial_positions[zone] = zone.global_position
-
 
 func restore_initial_positions() -> void:
 	var objects = get_tree().get_nodes_in_group("draggable_object")
@@ -60,7 +86,7 @@ func assign_numbers() -> void:
 		var random_number = randi_range(1, 999)
 		if random_number not in assigned_numbers:
 			assigned_numbers.append(random_number)
-			
+
 func generate_numbers() -> void:
 	var objects = get_tree().get_nodes_in_group("draggable_object")
 	var dropzones = get_tree().get_nodes_in_group("dropzone")
@@ -89,7 +115,7 @@ func shuffle_nodes(nodes: Array) -> Array:
 		nodes[i] = nodes[random_index]
 		nodes[random_index] = temp
 	return nodes	
-	
+
 func convert_number_to_words(number: int) -> String:
 	var units = ["", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"]
 	var teens = ["diez", "once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve"]
@@ -133,7 +159,7 @@ func update_timer_label() -> void:
 		time_panel.modulate = Color(1, 0, 0)
 	else:
 		time_panel.modulate = Color(1, 1, 1) 
-	
+
 func _on_timer_timeout() -> void:
 	restore_initial_positions()	
 	assign_numbers()
@@ -161,13 +187,11 @@ func play_move_animation(level: int) -> void:
 	else:
 		print("No se encontró el SubViewport.")
 
-# Función para manejar el evento cuando la animación termina
 func _on_animation_finished(anim_name: String) -> void:
 	if anim_name.begins_with("move_"):
 		$Fondo.modulate = Color(1, 1, 1, 0.5) 
 		$objects.visible = true
 		$zones.visible = true
-
 
 func update_level_label() -> void:
 	var level_label = $level

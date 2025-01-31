@@ -1,15 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://cmac4lfkilyyr"]
 
 [ext_resource type="Script" path="res://scripts/Biblioteca/thirdMiniGame/draggableObject.gd" id="1_o2hni"]
-[ext_resource type="Texture2D" uid="uid://bujasvaudi5ge" path="res://assets/3dassets/Old-Books/IMPORT/texture/books-01-jack-assets-albedo.bmp" id="2_mf8ai"]
+[ext_resource type="Texture2D" uid="uid://yhxvdp7iay37" path="res://assets/biblioteca/Default_A_cartoonstyle_illustration_of_an_old_thick_book_lying_1_0c617eef-d991-44a8-829e-0d17d5203302_0.png" id="2_kudmh"]
 [ext_resource type="FontFile" uid="uid://dtaiklndn4dtq" path="res://assets/fonts/vhs-gothic.ttf" id="3_ee3gu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7p7h"]
-size = Vector2(25.4405, 39.8678)
+size = Vector2(63.6564, 14.7577)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dodp8"]
 font = ExtResource("3_ee3gu")
-font_size = 32
+font_size = 50
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
@@ -18,23 +18,22 @@ z_index = 1
 script = ExtResource("1_o2hni")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_mf8ai")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_kudmh")
 region_enabled = true
-region_rect = Rect2(256, 384, 256, 382)
+region_rect = Rect2(0, 192, 1184, 288)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(4.76837e-07, 0)
 scale = Vector2(4.54, 4.54)
 shape = SubResource("RectangleShape2D_k7p7h")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -36.0
-offset_top = -21.0
-offset_right = 37.0
-offset_bottom = 24.0
+offset_left = -123.0
+offset_top = -29.0
+offset_right = 123.0
+offset_bottom = 28.0
 label_settings = SubResource("LabelSettings_dodp8")
 horizontal_alignment = 1
 vertical_alignment = 1

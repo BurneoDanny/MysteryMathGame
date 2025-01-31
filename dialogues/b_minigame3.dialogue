@@ -1,0 +1,36 @@
+~ start
+Bibliotecario: [center][b][color=yellow]📚 Biblioteca de Math City - Sala de Misterios 📚[/color][/b][/center]  
+Bibliotecario: ¡Ah, el gran [b]Hombre Misterio[/b]! Te esperaba... [wait=0.5]  
+Bibliotecario: Has resuelto dos acertijos hasta ahora, pero este... [wave]este es el último.[/wave] [wait=0.5]  
+Bibliotecario: Si logras resolverlo, descubrirás la verdad sobre la biblioteca... y podrás avanzar al siguiente destino. [wait=1]  
+
+~ opciones
+Bibliotecario: [b][color=green]¿Preparado para el desafío?[/color][/b]  
+
+- *¿De qué trata el acertijo?*  
+	=> explicacion_acertijo  
+- *¿Tienes alguna pista?*  
+	=> dar_pista 
+- *Estoy listo.*  
+	Bibliotecario: [shake]¡Ja! Me gusta tu confianza!![/shake] [wait=1]  
+	Bibliotecario: [wave]¡Espero estes listo![/wave]  
+	=> aceptar_reto  
+
+~ explicacion_acertijo  
+Bibliotecario: Es simple... en apariencia. [wait=0.5]  
+Bibliotecario: Frente a ti hay [b]libros antiguos con números en sus lomos.[/b] [wait=0.5]  
+Bibliotecario: Debes colocarlos en la [b][color=orange]estantería[/color][/b], pero no en cualquier orden... [wait=1]  
+Bibliotecario: Los recuadros indican el número en [b]palabras[/b], y tú debes emparejar cada libro con su lugar correcto. [wait=1]  
+Bibliotecario: [wave]Solo si los ordenas bien, la puerta secreta se abrirá.[/wave] [next=auto]  
+=> opciones  
+
+~ dar_pista  
+Bibliotecario: [b][color=blue]¿Una pista? Hmm...[/color][/b] [wait=0.5]  
+Bibliotecario: A veces, la gente confunde los números entre [b]diez y veinte[/b]. [shake]¡Presta atención a esos![/shake] [wait=1]  
+Bibliotecario: Y recuerda... los libros correctos [b][color=green]brillarán en verde[/color][/b], pero si te equivocas... [wave]rebotarán.[/wave] [next=auto]  
+=> opciones  
+
+~ aceptar_reto  
+Bibliotecario: [b][color=yellow]¡Muy bien! Que empiece el desafío.[/color][/b] [next=auto]  
+do _on_dialogue_finished()
+=> END  
