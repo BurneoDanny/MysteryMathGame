@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bs3gs7ckoak7"]
+[gd_scene load_steps=8 format=3 uid="uid://bs3gs7ckoak7"]
 
 [ext_resource type="Texture2D" uid="uid://pd2m4qr7duda" path="res://assets/2dassets/textures/forrest_ground_01_diff_4k.png" id="1_fvdvw"]
 [ext_resource type="Texture2D" uid="uid://injmt1n2hkpj" path="res://assets/2dassets/textures/forrest_ground_01_nor_gl_4k.png" id="2_aadhd"]
 [ext_resource type="Texture2D" uid="uid://c68er5asosgfj" path="res://assets/2dassets/textures/forrest_ground_01_rough_4k.png" id="3_tgs3i"]
-[ext_resource type="Texture2D" uid="uid://cig5qpqv0k26o" path="res://assets/AllSkyFree_Sky_EpicBlueSunset_Equirect.png" id="4_nml6p"]
 [ext_resource type="PackedScene" uid="uid://b7vrwo7vcq52x" path="res://assets/3dassets/Godot_4/Furnitures/Scenes/furniture/furniture_chair_2.tscn" id="5_fpr7n"]
 [ext_resource type="PackedScene" uid="uid://dvyxccotdydm4" path="res://assets/3dassets/Godot_4/Furnitures/Scenes/furniture/furniture_table_2.tscn" id="6_jgx88"]
 
@@ -17,27 +16,6 @@ uv1_scale = Vector3(100, 100, 100)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_67sd0"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_utrox"]
-panorama = ExtResource("4_nml6p")
-
-[sub_resource type="Sky" id="Sky_k8x5p"]
-sky_material = SubResource("PanoramaSkyMaterial_utrox")
-
-[sub_resource type="Environment" id="Environment_pqqn0"]
-background_mode = 2
-sky = SubResource("Sky_k8x5p")
-ambient_light_energy = 0.67
-ssao_radius = 8.1
-ssao_intensity = 4.3
-glow_enabled = true
-glow_intensity = 1.86
-glow_strength = 0.87
-glow_bloom = 0.02
-glow_hdr_threshold = 0.44
-fog_depth_curve = 0.466516
-fog_depth_begin = 98.8
-fog_depth_end = 1444.5
-
 [node name="Menubackground" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -46,7 +24,6 @@ material_override = SubResource("StandardMaterial3D_t0elq")
 mesh = SubResource("PlaneMesh_67sd0")
 
 [node name="WorldEnvironment_EpicBlueSunset" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_pqqn0")
 
 [node name="Furniture_Chair_2" parent="." instance=ExtResource("5_fpr7n")]
 axis_lock_linear_y = true
