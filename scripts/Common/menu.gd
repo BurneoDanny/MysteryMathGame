@@ -1,5 +1,10 @@
 extends Control
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
+func _ready():
+	audio_stream_player.play()
+
 func _on_play_pressed() -> void:
 	#SceneTransition.change_scene("res://scenes/Biblioteca/thirdMiniGame/thirdminigame.tscn")
 	#SceneTransition.change_scene("res://scenes/Biblioteca/secondMiniGame/minigame_2.tscn")

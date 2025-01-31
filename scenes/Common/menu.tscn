@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://pl4xi0xo7a3j"]
+[gd_scene load_steps=7 format=3 uid="uid://pl4xi0xo7a3j"]
 
 [ext_resource type="Script" path="res://scripts/Common/menu.gd" id="1_15log"]
-[ext_resource type="Texture2D" uid="uid://c383illb6yk2q" path="res://assets/menu/DALL·E 2024-11-16 18.35.48 - Una imagen que sirve como fondo para un menú de un juego de misterios matemáticos ambientado en los años 30. La escena muestra una oficina privada con.webp" id="2_b0jae"]
+[ext_resource type="PackedScene" uid="uid://bs3gs7ckoak7" path="res://scenes/Common/menubackground.tscn" id="3_d6rj5"]
 [ext_resource type="FontFile" uid="uid://b3kg74q8llorw" path="res://assets/fonts/Magic Trick.otf" id="3_hcwvd"]
+[ext_resource type="AudioStream" uid="uid://bgce4a61dgmub" path="res://sounds/music/mathcitybyDannyBurneo.mp3" id="4_cr0xx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_bc0y1"]
+viewport_path = NodePath("Container/SubViewport")
 
 [sub_resource type="LabelSettings" id="LabelSettings_1acri"]
 font = ExtResource("3_hcwvd")
@@ -16,11 +20,21 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_15log")
 
+[node name="Container" type="Container" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SubViewport" type="SubViewport" parent="Container"]
+size = Vector2i(1920, 1080)
+
+[node name="Menubackground" parent="Container/SubViewport" instance=ExtResource("3_d6rj5")]
+
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1919.0
+offset_right = 1920.0
 offset_bottom = 1081.0
-texture = ExtResource("2_b0jae")
+texture = SubResource("ViewportTexture_bc0y1")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -58,6 +72,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_hcwvd")
 theme_override_font_sizes/font_size = 200
 text = "SALIR"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cr0xx")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_button_pressed"]
