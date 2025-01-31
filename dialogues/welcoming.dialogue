@@ -61,5 +61,6 @@ Alcalde: [shake]Podrías encontrar herramientas útiles ahí.[/shake] [next=auto
 
 ~ continuar_despedida  
 Alcalde: [b][color=orange]¡Buena suerte, Hombre Misterio![/color][/b] [wave]La ciudad cuenta contigo.[/wave] [next=auto]  
+do _on_main_dialogue_finished()
 => END  
 

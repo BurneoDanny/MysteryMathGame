@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dtaiklndn4dtq" path="res://assets/fonts/vhs-gothic.ttf" id="3_ee3gu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7p7h"]
-size = Vector2(63.6564, 14.7577)
+size = Vector2(63.6564, 14.5374)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dodp8"]
 font = ExtResource("3_ee3gu")
@@ -26,6 +26,7 @@ region_rect = Rect2(0, 192, 1184, 288)
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.499996, 0)
 scale = Vector2(4.54, 4.54)
 shape = SubResource("RectangleShape2D_k7p7h")
 

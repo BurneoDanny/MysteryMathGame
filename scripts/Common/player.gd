@@ -10,7 +10,7 @@ var current_dir = "none"
 @onready var hurtBox = $hurtbox
 signal healthChanged
 var isHurt: bool = false
-
+var can_move = false  # 🔹 Controla si el jugador puede moverse
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
@@ -44,8 +44,11 @@ func hurtByEnemy(area):
 	effects.play("RESET")
 	isHurt = false
 
-
 func player_movement(delta):
+	if not can_move:  # 🔹 Bloquea el movimiento al inicio
+		velocity = Vector2.ZERO
+		return
+		
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
 		play_anim(1)
@@ -70,8 +73,9 @@ func player_movement(delta):
 		play_anim(0)
 		velocity.x = 0
 		velocity.y = 0
-		
+
 	move_and_slide()
+
 
 func play_anim(movement):
 	var dir = current_dir

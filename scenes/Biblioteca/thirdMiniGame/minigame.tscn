@@ -77,42 +77,42 @@ horizontal_alignment = 1
 [node name="objects" type="Node2D" parent="."]
 
 [node name="draggableObject" parent="objects" instance=ExtResource("3_mdes8")]
-position = Vector2(-305, -456)
+position = Vector2(-39, -428)
 
 [node name="draggableObject2" parent="objects" instance=ExtResource("3_mdes8")]
-position = Vector2(-719, -347)
+position = Vector2(-453, -319)
 
 [node name="draggableObject3" parent="objects" instance=ExtResource("3_mdes8")]
-position = Vector2(-305, -347)
+position = Vector2(-39, -319)
 
 [node name="draggableObject4" parent="objects" instance=ExtResource("3_mdes8")]
-position = Vector2(90, -456)
+position = Vector2(356, -428)
 
 [node name="draggableObject5" parent="objects" instance=ExtResource("3_mdes8")]
-position = Vector2(-719, -456)
+position = Vector2(-453, -428)
 
 [node name="draggableObject6" parent="objects" instance=ExtResource("3_mdes8")]
-position = Vector2(90, -347)
+position = Vector2(356, -319)
 
 [node name="zones" type="Node2D" parent="."]
 
 [node name="StaticBody2D" parent="zones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-596, 402)
+position = Vector2(-410, 438)
 
 [node name="StaticBody2D2" parent="zones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-596, -177)
+position = Vector2(-410, -141)
 
 [node name="StaticBody2D3" parent="zones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-596, 287)
+position = Vector2(-410, 323)
 
 [node name="StaticBody2D4" parent="zones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-596, 175)
+position = Vector2(-410, 211)
 
 [node name="StaticBody2D5" parent="zones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-596, 57)
+position = Vector2(-410, 93)
 
 [node name="StaticBody2D6" parent="zones" instance=ExtResource("4_0eb4a")]
-position = Vector2(-596, -61)
+position = Vector2(-410, -25)
 
 [node name="character" type="Sprite2D" parent="."]
 visible = false
