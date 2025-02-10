@@ -7,8 +7,8 @@ func _ready():
 
 func _on_play_pressed() -> void:
 	#SceneTransition.change_scene("res://scenes/Biblioteca/thirdMiniGame/thirdminigame.tscn")
-	#SceneTransition.change_scene("res://scenes/Biblioteca/secondMiniGame/minigame_2.tscn")
-	SceneTransition.change_scene("res://scenes/Common/TileMap.tscn")
+	SceneTransition.change_scene("res://scenes/Biblioteca/secondMiniGame/minigame_2.tscn")
+	#SceneTransition.change_scene("res://scenes/Common/TileMap.tscn")
 
 func _on_options_pressed() -> void:
 	SceneTransition.change_scene("res://scenes/Common/OptionsMenu.tscn")

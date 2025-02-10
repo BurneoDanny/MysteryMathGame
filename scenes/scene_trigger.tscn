@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddp33pv5s7rnp"]
 
-[ext_resource type="Script" path="res://scripts/scene_trigger.gd" id="1_xvj5w"]
+[sub_resource type="Resource" id="Resource_de0x1"]
+metadata/__load_path__ = "res://scripts/scene_trigger.gd"
 
 [node name="SceneTrigger" type="Area2D"]
 collision_layer = 0
 collision_mask = 8
-script = ExtResource("1_xvj5w")
+script = SubResource("Resource_de0x1")
