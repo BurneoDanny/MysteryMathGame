@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddw3x8qffe33e"]
+[gd_scene load_steps=8 format=3 uid="uid://cu7tmux2va6wc"]
 
-[ext_resource type="PackedScene" uid="uid://dkhljlhycwvgy" path="res://scenes/Biblioteca/firstMiniGame/collectable.tscn" id="1_xysl3"]
-[ext_resource type="Texture2D" uid="uid://bfhxxifs0icj5" path="res://assets/art/book1.png" id="2_4r1lc"]
-[ext_resource type="Script" path="res://scripts/Biblioteca/firstMiniGame/collectable_book_1.gd" id="2_kk7r8"]
+[ext_resource type="PackedScene" uid="uid://dkhljlhycwvgy" path="res://scenes/Biblioteca/firstMiniGame/collectable.tscn" id="1_vfpvr"]
+[ext_resource type="Texture2D" uid="uid://yw2hrej3cncw" path="res://assets/art/book2.png" id="2_26h37"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/firstMiniGame/collectable_book_2.gd" id="2_m1tr4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6p06"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cx2u"]
 resource_local_to_scene = true
-size = Vector2(22, 27)
+size = Vector2(21.5, 27)
 
 [sub_resource type="Animation" id="Animation_gw7f1"]
 length = 0.001
@@ -46,17 +46,16 @@ _data = {
 "spin": SubResource("Animation_toisn")
 }
 
-[node name="CollectableBook1" instance=ExtResource("1_xysl3")]
-script = ExtResource("2_kk7r8")
+[node name="Book2" instance=ExtResource("1_vfpvr")]
+script = ExtResource("2_m1tr4")
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_l6p06")
+position = Vector2(-0.75, 0)
+shape = SubResource("RectangleShape2D_5cx2u")
 
 [node name="Sprite2D" parent="." index="1"]
-position = Vector2(1, -1)
-scale = Vector2(0.606, 0.6)
-texture = ExtResource("2_4r1lc")
+scale = Vector2(0.64, 0.6195)
+texture = ExtResource("2_26h37")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {

@@ -1,25 +1,32 @@
-extends CharacterBody2D
+extends CharacterBody2D 
 
-const speed = 100
+const speed = 200
 var current_dir = "none"
 @onready var effects = $Effects
 @onready var hurtTimer = $hurtTimer
-@export var knockbackPower: int = 500
+@export var knockbackPower: int = 2000
 @export var maxHealth = 3
 @onready var currentHealth: int = maxHealth
 @onready var hurtBox = $hurtbox
+@onready var game_over_screen = $"../CanvasLayer5/GameOver"
+@onready var game_elements = $"../.."  # Todos los elementos del juego para pausarlos
 signal healthChanged
 var isHurt: bool = false
-var can_move = false  # 🔹 Controla si el jugador puede moverse
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
 	effects.play("RESET")
-	
+
+	if game_over_screen:  # 🔥 Evita el error si es nulo
+		game_over_screen.hide()  # Ocultar GameOver al inicio
+	else:
+		print_debug("⚠ ERROR: No se encontró game_over_screen")
+
 func handle_collision():
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
+		print_debug(collider.name)
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -31,10 +38,12 @@ func _physics_process(delta):
 			
 func hurtByEnemy(area):
 	currentHealth -= 1
-	if currentHealth == 0:
-		currentHealth = maxHealth
-		_on_health_equal_zero()
 	healthChanged.emit(currentHealth)
+
+	if currentHealth <= 0:
+		show_game_over()  # Llama a la función para pausar y mostrar GameOver
+		return
+
 	isHurt = true
 	knockback(area.get_parent().velocity)
 	effects.play("hurtBlink")
@@ -44,37 +53,39 @@ func hurtByEnemy(area):
 	isHurt = false
 
 func player_movement(delta):
-	if not can_move:  # 🔹 Bloquea el movimiento al inicio
-		velocity = Vector2.ZERO
-		return
-		
+	var input_vector = Vector2.ZERO  # Vector para almacenar el movimiento
+
+	# Captura la dirección de movimiento en X e Y
 	if Input.is_action_pressed("ui_right"):
-		current_dir = "right"
+		input_vector.x += 1
+	if Input.is_action_pressed("ui_left"):
+		input_vector.x -= 1
+	if Input.is_action_pressed("ui_down"):
+		input_vector.y += 1
+	if Input.is_action_pressed("ui_up"):
+		input_vector.y -= 1
+
+	# Normalizar para evitar que la velocidad diagonal sea mayor
+	input_vector = input_vector.normalized()
+
+	# Aplicar la velocidad
+	velocity = input_vector * speed
+
+	# Manejar animaciones
+	if velocity.length() > 0:
 		play_anim(1)
-		velocity.x = speed
-		velocity.y = 0
-	elif Input.is_action_pressed("ui_left"):
-		current_dir = "left"
-		play_anim(1)
-		velocity.x = -speed
-		velocity.y = 0
-	elif Input.is_action_pressed("ui_down"):
-		current_dir = "down"
-		play_anim(1)
-		velocity.y = speed
-		velocity.x = 0
-	elif Input.is_action_pressed("ui_up"):
-		current_dir = "up"
-		play_anim(1)
-		velocity.y = -speed
-		velocity.x = 0
+		if input_vector.x > 0:
+			current_dir = "right"
+		elif input_vector.x < 0:
+			current_dir = "left"
+		elif input_vector.y > 0:
+			current_dir = "down"
+		elif input_vector.y < 0:
+			current_dir = "up"
 	else:
 		play_anim(0)
-		velocity.x = 0
-		velocity.y = 0
 
 	move_and_slide()
-
 
 func play_anim(movement):
 	var dir = current_dir
@@ -108,22 +119,37 @@ func play_anim(movement):
 		elif movement == 0:
 			anim.play("back_idle")
 
-
 func _on_hurtbox_area_entered(area):
 	if area.has_method("collect"):
-		area.collect()
+		var math_operation = $"../CanvasLayer2/MathOperation"
+		if math_operation:
+			var answer = await math_operation.check_answer(area.booknumber)
+			if answer:
+				area.collect()
 
-	
 func knockback(enemyVelocity: Vector2):
 	var knockbackDirection = (enemyVelocity - velocity).normalized() * knockbackPower
 	velocity = knockbackDirection
-	print_debug(velocity)
-	print_debug(position)
 	move_and_slide()
-	print_debug(position)
-	print_debug(" ")
 	print_debug("current HEALTH = ",currentHealth)
-	
-	
-func _on_health_equal_zero():
-		get_tree().change_scene_to_file("res://scenes/gameover.tscn")
+
+#  FUNCIÓN PARA MOSTRAR GAME OVER Y PAUSAR EL JUEGO
+func show_game_over():
+	print_debug("Mostrando pantalla de GameOver...")
+
+	# Pausar la lógica del juego
+	for node in game_elements.get_children():
+		if node != game_over_screen:
+			if node is Timer:
+				node.stop()
+			elif node is Control or node is SubViewportContainer:
+				node.visible = false  # Ocultar elementos innecesarios
+			else:
+				node.process_mode = Node.PROCESS_MODE_DISABLED  # Deshabilitar lógica de juego
+
+	# Asegurar que `GameOver` sigue funcionando
+	game_over_screen.process_mode = Node.PROCESS_MODE_ALWAYS
+	game_over_screen.show_game_over() # Llama a la función en GameOver
+
+	# Pausar completamente el juego
+	get_tree().paused = true

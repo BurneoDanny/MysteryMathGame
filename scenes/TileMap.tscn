@@ -1,7 +1,7 @@
 [gd_scene load_steps=75 format=4 uid="uid://d2ip1oh0finrg"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="2_1rn67"]
 [ext_resource type="Texture2D" uid="uid://ieeobc84qbu4" path="res://assets/Animations/Aldruir pose N.png" id="3_5ck4a"]
+[ext_resource type="Script" path="res://scripts/Common/player.gd" id="3_mg10k"]
 [ext_resource type="Texture2D" uid="uid://cia10cp045o3f" path="res://assets/Animations/Aldruir Walk N 2.png" id="4_dc42h"]
 [ext_resource type="Texture2D" uid="uid://bt6qpc6n5h7r" path="res://assets/Animations/Aldruir Pose S.png" id="5_f3d0r"]
 [ext_resource type="Texture2D" uid="uid://cpm0o3penytus" path="res://assets/lpc-victorian-preview/Sprite biblioteca.png" id="6_hfflo"]
@@ -476,7 +476,7 @@ tile_set = SubResource("TileSet_cpoo8")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(72, -2572)
 collision_layer = 9
-script = ExtResource("2_1rn67")
+script = ExtResource("3_mg10k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(0, 1.27541)
@@ -528,7 +528,7 @@ polygon = PackedVector2Array(-362, 82, -363, -271, -352, -285, 84, -283, 84, 82,
 
 [node name="SceneTrigger" parent="." instance=ExtResource("16_0w0i6")]
 position = Vector2(352, -2568)
-connected_scene = "inside_library"
+script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
 z_index = 1

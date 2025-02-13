@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxybxlwd1c7jx"]
+
+[ext_resource type="Script" path="res://scripts/Biblioteca/firstMiniGame/math_operation.gd" id="1_v3i4q"]
+[ext_resource type="FontFile" uid="uid://c55u258cf0q6c" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="2_fhenh"]
+
+[node name="MathOperation" type="Control"]
+layout_mode = 3
+anchor_right = 0.048
+anchor_bottom = 0.054
+offset_right = 24.84
+offset_bottom = -0.32
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v3i4q")
+
+[node name="MathLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -98.0
+offset_right = 1470.0
+offset_bottom = 161.0
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_fonts/font = ExtResource("2_fhenh")
+theme_override_font_sizes/font_size = 215
+text = "MATH OPERATION"

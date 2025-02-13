@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://h0j716wq7nbi"]
+[gd_scene load_steps=14 format=3 uid="uid://h0j716wq7nbi"]
 
 [ext_resource type="Texture2D" uid="uid://bhaf1na1uqpsm" path="res://assets/Animations/ghost.png" id="1_5qewg"]
 [ext_resource type="Script" path="res://scripts/Biblioteca/firstMiniGame/ghost.gd" id="1_ac6bq"]
@@ -74,13 +74,9 @@ animations = [{
 "speed": 9.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o3bbx"]
-radius = 33.3333
-height = 112.82
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pera5"]
-radius = 30.7692
-height = 112.821
+radius = 23.0769
+height = 71.7949
 
 [node name="Ghost" type="CharacterBody2D"]
 light_mask = 2
@@ -91,14 +87,12 @@ wall_min_slide_angle = 0.0
 script = ExtResource("1_ac6bq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.86102e-06, 5.12821)
+scale = Vector2(0.610133, 0.540806)
 sprite_frames = SubResource("SpriteFrames_e6pr0")
 animation = &"Ghost"
 frame = 1
 frame_progress = 0.541601
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7.69231, -12.8205)
-shape = SubResource("CapsuleShape2D_o3bbx")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 debug_enabled = true
@@ -110,7 +104,7 @@ autostart = true
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(7.69231, -10.2564)
+position = Vector2(0, -7.69231)
 shape = SubResource("CapsuleShape2D_pera5")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
