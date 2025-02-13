@@ -12,6 +12,7 @@ var current_dir = "none"
 @onready var game_elements = $"../.."  # Todos los elementos del juego para pausarlos
 signal healthChanged
 var isHurt: bool = false
+var can_move = false  # 🔹 Controla si el jugador puede moverse
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
@@ -53,6 +54,10 @@ func hurtByEnemy(area):
 	isHurt = false
 
 func player_movement(delta):
+	if not can_move:  # 🔹 Bloquea el movimiento al inicio
+		velocity = Vector2.ZERO
+		return
+		
 	var input_vector = Vector2.ZERO  # Vector para almacenar el movimiento
 
 	# Captura la dirección de movimiento en X e Y

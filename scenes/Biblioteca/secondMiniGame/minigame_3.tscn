@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://7b8ltre0e6yj"]
+[gd_scene load_steps=23 format=3 uid="uid://cr4unmnu86ugo"]
 
+[ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/minigame_2.gd" id="1_n4e5u"]
 [ext_resource type="Texture2D" uid="uid://besjg8f6p2tdc" path="res://assets/art/minigame3/library.png" id="1_pxlxj"]
 [ext_resource type="Texture2D" uid="uid://cdlkm7lytck5" path="res://assets/art/minigame3/libbooktag1.png" id="2_wbkvd"]
 [ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/libbooktag_1.gd" id="3_4tcjq"]
@@ -13,15 +14,17 @@
 [ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/container.gd" id="12_v5vs5"]
 [ext_resource type="Script" path="res://scenes/viewport.gd" id="13_qkfgp"]
 [ext_resource type="Texture2D" uid="uid://cgwc2wom0tbfo" path="res://assets/art/lupa.png" id="14_7umvn"]
-[ext_resource type="PackedScene" uid="uid://cm8ool5klqo6g" path="res://scenes/Common/pause_menu.tscn" id="15_mi5n2"]
-[ext_resource type="PackedScene" uid="uid://bxybxlwd1c7jx" path="res://scenes/Biblioteca/secondMiniGame/math_operation.tscn" id="16_3lc0j"]
+[ext_resource type="PackedScene" uid="uid://4u1whi51fgqh" path="res://scenes/Common/pause_menu.tscn" id="15_mi5n2"]
+[ext_resource type="PackedScene" path="res://scenes/Biblioteca/secondMiniGame/math_operation.tscn" id="16_3lc0j"]
 [ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/math_operation_2.gd" id="17_02rby"]
 [ext_resource type="PackedScene" uid="uid://cnj2hcdvklajg" path="res://scenes/Biblioteca/firstMiniGame/health_timer.tscn" id="17_6on75"]
-[ext_resource type="PackedScene" uid="uid://qc5y5ap3ne1h" path="res://scenes/Common/win_screen.tscn" id="19_1bww5"]
+[ext_resource type="PackedScene" uid="uid://ckoij0lv6kl1" path="res://scenes/Common/win_screen.tscn" id="19_1bww5"]
 [ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/win_screen2.gd" id="20_unu2d"]
-[ext_resource type="PackedScene" uid="uid://y75inopfqogp" path="res://scenes/Common/gameover.tscn" id="21_u36sn"]
+[ext_resource type="Texture2D" uid="uid://co0fl3fhc6ofh" path="res://assets/biblioteca/Default_A_cartoonstyle_illustration_of_an_enthusiastic_male_li_0_aea277e7-61bc-4dbd-b5c6-b905b9419ad2_0.png" id="21_oq28c"]
+[ext_resource type="PackedScene" uid="uid://dj4kkf6jnb5v3" path="res://scenes/Common/gameover.tscn" id="21_u36sn"]
 
 [node name="Minigame3" type="Node2D"]
+script = ExtResource("1_n4e5u")
 
 [node name="Library" type="Sprite2D" parent="."]
 position = Vector2(958, 541)
@@ -126,3 +129,9 @@ script = ExtResource("20_unu2d")
 [node name="CanvasLayer5" type="CanvasLayer" parent="."]
 
 [node name="GameOver" parent="CanvasLayer5" instance=ExtResource("21_u36sn")]
+
+[node name="librerian" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(676.688, 548.063)
+scale = Vector2(1.54614, 1.65495)
+texture = ExtResource("21_oq28c")

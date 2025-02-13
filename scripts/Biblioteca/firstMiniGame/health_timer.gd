@@ -1,23 +1,36 @@
 extends Node
-
+@onready var inside_library: Node2D = $"../.."
 @onready var label = $Label
 @onready var timer = $Timer
 @onready var animation = $Label/AnimationPlayer
 @onready var animation_timer = $animation_timer
 @onready var game_over_screen = $"../../CanvasLayer5/GameOver"
+@onready var player: CharacterBody2D = $"../../player"
+@onready var minigame_3: Node2D = $"../.."
+var flag: bool = false
 
 func _ready():
-	timer.start()
 	animation.play("RESET")
-	
-	# 🔄 Esperar un frame para asegurar que GameOver se haya cargado
 	await get_tree().process_frame
-	
-	# 🔍 Verificar si GameOver existe antes de usarlo
 	if game_over_screen:
-		game_over_screen.hide()  # Ocultar GameOver al inicio
+		game_over_screen.hide()  
 	else:
 		print_debug("⚠️ Advertencia: No se encontró el nodo GameOver en CanvasLayer4")
+	if player:
+		inside_library.can_move_changed.connect(_on_player_can_move)
+	else:
+		minigame_3.can_move_changed2.connect(_on_game_can_start)
+	
+
+func _on_game_can_start():
+	timer.start()
+	flag = true
+	print_debug("¡Timer iniciado!")
+		
+func _on_player_can_move():
+	if player.can_move:
+		timer.start()
+		print_debug("🏃 Jugador puede moverse, ¡Timer iniciado!")
 
 func time_left_to_live():
 	var time_left = timer.time_left
@@ -27,10 +40,13 @@ func time_left_to_live():
 
 func _process(delta):
 	label.text = "%02d:%02d" % time_left_to_live()
-
-	# ✅ Si el tiempo llega a 0, mostrar GameOver
-	if timer.time_left <= 0:
-		show_game_over()
+	#✅ Si el tiempo llega a 0, mostrar GameOver
+	if player:
+		if timer.time_left <= 0 and player.can_move:
+			show_game_over()
+	else:
+		if timer.time_left <= 0 and flag:
+			show_game_over()
 
 func subtract_time(seconds: int):
 	var new_time = max(0, timer.time_left - seconds)  # Asegura que el tiempo no sea negativo

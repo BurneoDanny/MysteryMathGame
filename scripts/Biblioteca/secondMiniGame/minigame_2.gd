@@ -1,8 +1,7 @@
 extends Node2D
-
+signal can_move_changed2
 @onready var librerian: Sprite2D = $librerian
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	introduce_dialogue()
 
@@ -12,6 +11,7 @@ func introduce_dialogue() -> void:
 
 func _on_lupa_dialogue_finished() -> void:
 	librerian.visible = false
+	emit_signal("can_move_changed2")
 	
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

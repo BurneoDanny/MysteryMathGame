@@ -4,4 +4,4 @@ extends "res://scripts/Common/BaseWinScreen.gd"
 func _on_continuar_pressed():
 	print("Continuar presionado en este minijuego")
 	close_win_screen()
-	get_tree().change_scene_to_file("res://scenes/Biblioteca/thirdMiniGame/minigame.tscn")
+	SceneTransition.change_scene("res://scenes/Biblioteca/thirdMiniGame/thirdminigame.tscn")

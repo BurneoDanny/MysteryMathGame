@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://qc5y5ap3ne1h"]
+[gd_scene load_steps=9 format=3 uid="uid://ckoij0lv6kl1"]
 
 [ext_resource type="Shader" path="res://pause_menu.gdshader" id="1_ib6ib"]
 [ext_resource type="Texture2D" uid="uid://d2yoejno4u7sk" path="res://assets/art/windowpopup.png" id="2_vrfgj"]

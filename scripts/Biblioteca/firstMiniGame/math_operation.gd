@@ -1,7 +1,7 @@
 extends Node
 
 @onready var math_label = $MathLabel
-@onready var health_timer = $"../../CanvasLayer/Control"
+@onready var health_timer = $"../../CanvasLayer/timer"
 @onready var win_screen = $"../../CanvasLayer4/WinScreen"
 @onready var game_elements = $"../.."
 
