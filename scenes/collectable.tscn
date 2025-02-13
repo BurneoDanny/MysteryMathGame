@@ -1,13 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqwmomavdqq28"]
-
-[sub_resource type="Resource" id="Resource_m8ill"]
-metadata/__load_path__ = "res://scripts/collectable.gd"
+[gd_scene load_steps=2 format=3 uid="uid://bqwmomavdqq28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iy7h0"]
 resource_local_to_scene = true
 
 [node name="Collectable" type="Area2D"]
-script = SubResource("Resource_m8ill")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_iy7h0")

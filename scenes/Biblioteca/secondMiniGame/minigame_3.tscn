@@ -1,0 +1,128 @@
+[gd_scene load_steps=21 format=3 uid="uid://7b8ltre0e6yj"]
+
+[ext_resource type="Texture2D" uid="uid://besjg8f6p2tdc" path="res://assets/art/minigame3/library.png" id="1_pxlxj"]
+[ext_resource type="Texture2D" uid="uid://cdlkm7lytck5" path="res://assets/art/minigame3/libbooktag1.png" id="2_wbkvd"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/libbooktag_1.gd" id="3_4tcjq"]
+[ext_resource type="Texture2D" uid="uid://bdybly43wbvig" path="res://assets/art/minigame3/libbooktag2.png" id="4_1x2eq"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/libbooktag_2.gd" id="5_eaaxp"]
+[ext_resource type="Texture2D" uid="uid://dcpx8xqi5la57" path="res://assets/art/minigame3/libbooktag3.png" id="6_sosp2"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/libbooktag_3.gd" id="7_3igcg"]
+[ext_resource type="Texture2D" uid="uid://d2dlb1ycrqyxh" path="res://assets/art/minigame3/libbook3.png" id="8_4crf2"]
+[ext_resource type="Texture2D" uid="uid://yslk22bshduc" path="res://assets/art/minigame3/libbook2.png" id="9_ae4ka"]
+[ext_resource type="Texture2D" uid="uid://kf6w4ldckqr1" path="res://assets/art/minigame3/libbook1.png" id="10_8i11y"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/container.gd" id="12_v5vs5"]
+[ext_resource type="Script" path="res://scenes/viewport.gd" id="13_qkfgp"]
+[ext_resource type="Texture2D" uid="uid://cgwc2wom0tbfo" path="res://assets/art/lupa.png" id="14_7umvn"]
+[ext_resource type="PackedScene" uid="uid://cm8ool5klqo6g" path="res://scenes/Common/pause_menu.tscn" id="15_mi5n2"]
+[ext_resource type="PackedScene" uid="uid://bxybxlwd1c7jx" path="res://scenes/Biblioteca/secondMiniGame/math_operation.tscn" id="16_3lc0j"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/math_operation_2.gd" id="17_02rby"]
+[ext_resource type="PackedScene" uid="uid://cnj2hcdvklajg" path="res://scenes/Biblioteca/firstMiniGame/health_timer.tscn" id="17_6on75"]
+[ext_resource type="PackedScene" uid="uid://qc5y5ap3ne1h" path="res://scenes/Common/win_screen.tscn" id="19_1bww5"]
+[ext_resource type="Script" path="res://scripts/Biblioteca/secondMiniGame/win_screen2.gd" id="20_unu2d"]
+[ext_resource type="PackedScene" uid="uid://y75inopfqogp" path="res://scenes/Common/gameover.tscn" id="21_u36sn"]
+
+[node name="Minigame3" type="Node2D"]
+
+[node name="Library" type="Sprite2D" parent="."]
+position = Vector2(958, 541)
+scale = Vector2(1.08008, 1.07227)
+texture = ExtResource("1_pxlxj")
+
+[node name="Libbooktag1" type="Sprite2D" parent="."]
+position = Vector2(1068, 326)
+scale = Vector2(1.07143, 1.06444)
+texture = ExtResource("2_wbkvd")
+script = ExtResource("3_4tcjq")
+
+[node name="Libbooktag2" type="Sprite2D" parent="."]
+position = Vector2(733, 329.375)
+scale = Vector2(1.04, 1.05269)
+texture = ExtResource("4_1x2eq")
+script = ExtResource("5_eaaxp")
+
+[node name="Libbooktag3" type="Sprite2D" parent="."]
+position = Vector2(1261.75, 578)
+scale = Vector2(1.03659, 1.06122)
+texture = ExtResource("6_sosp2")
+script = ExtResource("7_3igcg")
+
+[node name="Libbook3" type="Sprite2D" parent="."]
+visibility_layer = 4
+position = Vector2(1261.75, 577.5)
+scale = Vector2(1.03659, 1.06633)
+texture = ExtResource("8_4crf2")
+
+[node name="Libbook2" type="Sprite2D" parent="."]
+visibility_layer = 4
+position = Vector2(733, 328)
+scale = Vector2(1.04, 1.07399)
+texture = ExtResource("9_ae4ka")
+
+[node name="Libbook1" type="Sprite2D" parent="."]
+visibility_layer = 4
+position = Vector2(1066, 326)
+scale = Vector2(1.03683, 1.04639)
+texture = ExtResource("10_8i11y")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+offset_left = 383.0
+offset_top = 150.0
+offset_right = 423.0
+offset_bottom = 190.0
+
+[node name="Container" type="SubViewportContainer" parent="."]
+visibility_layer = 2
+anchors_preset = -1
+anchor_right = 0.425
+anchor_bottom = 0.695
+offset_left = 401.0
+offset_top = 170.0
+offset_right = 502.0
+offset_bottom = 272.0
+stretch = true
+script = ExtResource("12_v5vs5")
+
+[node name="SubViewport" type="SubViewport" parent="Container"]
+handle_input_locally = false
+canvas_cull_mask = 4294967289
+size = Vector2i(101, 102)
+render_target_update_mode = 4
+script = ExtResource("13_qkfgp")
+
+[node name="Camera2D" type="Camera2D" parent="Container/SubViewport"]
+zoom = Vector2(2, 2)
+
+[node name="Lupa" type="Sprite2D" parent="Container"]
+position = Vector2(65, 90)
+scale = Vector2(0.535484, 0.560759)
+texture = ExtResource("14_7umvn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("15_mi5n2")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="MathOperation" parent="CanvasLayer2" instance=ExtResource("16_3lc0j")]
+offset_left = 600.0
+offset_top = 921.0
+offset_right = 1968.84
+offset_bottom = 1045.68
+script = ExtResource("17_02rby")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer3" instance=ExtResource("17_6on75")]
+offset_left = 894.0
+offset_top = -24.0
+offset_right = 934.0
+offset_bottom = 16.0
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+
+[node name="WinScreen" parent="CanvasLayer4" instance=ExtResource("19_1bww5")]
+script = ExtResource("20_unu2d")
+
+[node name="CanvasLayer5" type="CanvasLayer" parent="."]
+
+[node name="GameOver" parent="CanvasLayer5" instance=ExtResource("21_u36sn")]
