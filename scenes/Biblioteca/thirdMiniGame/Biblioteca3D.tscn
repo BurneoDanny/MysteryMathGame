@@ -2238,6 +2238,7 @@ transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 
 
 [node name="book-152" parent="books6" instance=ExtResource("11_miwh6")]
 transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.884098, -1.21021, 0.0501277)
+visible = false
 
 [node name="book-153" parent="books6" instance=ExtResource("11_miwh6")]
 transform = Transform3D(-4.47035e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.47035e-08, 1.9984e-15, -0.933798, -1.21021, 0.050128)
