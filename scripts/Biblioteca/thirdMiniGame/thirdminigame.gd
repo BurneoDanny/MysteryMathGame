@@ -7,10 +7,10 @@ var assigned_numbers = []
 @onready var objects: Node2D = $objects
 @onready var zones: Node2D = $zones
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var retrymenu: Control = $Retrymenu
 
 func _process(delta: float) -> void:
 	update_timer_label()
-	
 
 func _ready() -> void:
 	introduce_dialogue() 
@@ -155,11 +155,11 @@ func update_timer_label() -> void:
 		time_panel.modulate = Color(1, 1, 1) 
 
 func _on_timer_timeout() -> void:
+	retrymenu.visible = true
 	restore_initial_positions()	
 	assign_numbers()
 	generate_numbers()
 	update_level_label()
-	$Timer.start()
 
 func play_move_animation(level: int) -> void:
 	print("level name:", level)
